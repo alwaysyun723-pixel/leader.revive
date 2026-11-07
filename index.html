@@ -1,0 +1,2937 @@
+<!DOCTYPE html>
+<html lang="ko" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+  <meta name="theme-color" content="#02090b">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>BELOTERO REVIVE® B2B Strategic Cosmic Command Hub & Matrix</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Space Grotesk, Inter, Orbitron, Noto Sans KR -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Orbitron:wght@500;700;900&family=Space+Grotesk:wght@500;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            cosmic: {
+              950: '#02090b',
+              900: '#051419',
+              850: '#081f25',
+              800: '#0d2d35',
+              700: '#14434f',
+            },
+            revive: {
+              teal: '#00c79e',
+              emerald: '#00f2b2',
+              mint: '#4ef2bb',
+              cyan: '#38bdf8',
+            },
+            wormhole: {
+              gold: '#ffd159',
+              amber: '#f59e0b',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', '"Noto Sans KR"', 'sans-serif'],
+            mono: ['"Space Grotesk"', '"Noto Sans KR"', 'monospace'],
+            display: ['Orbitron', 'sans-serif'],
+          },
+          animation: {
+            'spin-slow': 'spin 40s linear infinite',
+            'spin-reverse': 'spinRev 50s linear infinite',
+            'pulse-subtle': 'pulseSubtle 3s ease-in-out infinite',
+          },
+          keyframes: {
+            spinRev: {
+              '0%': { transform: 'rotate(0deg)' },
+              '100%': { transform: 'rotate(-360deg)' },
+            },
+            pulseSubtle: {
+              '0%, 100%': { opacity: '0.75' },
+              '50%': { opacity: '1' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Safe Area & In-App Browser (KakaoTalk, Safari, Galaxy) Optimization */
+    html, body {
+      padding-bottom: env(safe-area-inset-bottom, 0px);
+      -webkit-tap-highlight-color: transparent;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    /* High-contrast Aerospace Chamfer Borders */
+    .hex-chamfer {
+      clip-path: polygon(12px 0%, calc(100% - 12px) 0%, 100% 12px, 100% calc(100% - 12px), calc(100% - 12px) 100%, 12px 100%, 0% calc(100% - 12px), 0% 12px);
+    }
+    .hex-chamfer-lg {
+      clip-path: polygon(18px 0%, calc(100% - 18px) 0%, 100% 18px, 100% calc(100% - 18px), calc(100% - 18px) 100%, 18px 100%, 0% calc(100% - 18px), 0% 18px);
+    }
+
+    /* Solid High-Contrast Panels */
+    .command-panel {
+      background: rgba(6, 19, 24, 0.94);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(0, 242, 178, 0.35);
+      box-shadow: 0 10px 30px rgba(0, 4, 6, 0.8), inset 0 0 1px 1px rgba(255, 255, 255, 0.05);
+    }
+
+    .command-panel-gold {
+      background: rgba(22, 17, 5, 0.95);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 209, 89, 0.5);
+      box-shadow: 0 10px 30px rgba(10, 8, 2, 0.85);
+    }
+
+    .command-panel:hover {
+      border-color: rgba(0, 242, 178, 0.65);
+      box-shadow: 0 12px 35px rgba(0, 242, 178, 0.15);
+    }
+
+    /* Flip Clock Digit Card */
+    .flip-digit {
+      background: linear-gradient(180deg, #092127 0%, #031114 100%);
+      border: 1px solid rgba(0, 242, 178, 0.45);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 6px 16px rgba(0, 0, 0, 0.7);
+    }
+
+    /* Grid background */
+    .bg-radar-grid {
+      background-size: 48px 48px;
+      background-image: 
+        linear-gradient(to right, rgba(0, 242, 178, 0.04) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0, 242, 178, 0.04) 1px, transparent 1px);
+    }
+
+    /* Custom range slider */
+    input[type=range] {
+      -webkit-appearance: none;
+      background: rgba(0, 242, 178, 0.2);
+      height: 8px;
+      border-radius: 4px;
+    }
+    input[type=range]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: #00f2b2;
+      cursor: pointer;
+      box-shadow: 0 0 12px #00f2b2;
+      border: 2px solid #02090b;
+    }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #02090b;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(0, 242, 178, 0.4);
+      border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #00f2b2;
+    }
+  </style>
+</head>
+<body class="bg-cosmic-950 text-white font-sans min-h-screen overflow-x-hidden selection:bg-revive-emerald selection:text-black">
+
+  <!-- Interactive Cosmic Canvas -->
+  <canvas id="cosmic-canvas" class="fixed inset-0 pointer-events-none z-0"></canvas>
+  <div class="fixed inset-0 bg-radar-grid pointer-events-none z-0"></div>
+
+  <!-- Primary Wrapper - Responsive across Desktop, iPhone KakaoTalk/Safari & Galaxy -->
+  <div class="relative z-10 flex flex-col min-h-screen w-full max-w-[1680px] mx-auto px-2.5 sm:px-4 md:px-6 py-2.5 md:py-3 space-y-3 md:space-y-4">
+
+    <!-- ============================================================== -->
+    <!-- TOP NAVIGATION & BRANDING BAR                                  -->
+    <!-- ============================================================== -->
+    <header class="w-full command-panel rounded-2xl px-3.5 sm:px-5 py-3 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-3">
+      <!-- Brand & Tagline -->
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <div class="relative flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 hex-chamfer bg-revive-emerald/15 border-2 border-revive-emerald flex-shrink-0">
+            <i data-lucide="crosshair" class="w-5 h-5 text-revive-emerald animate-pulse"></i>
+            <span class="absolute -top-1 -right-1 w-2.5 h-2.5 rounded-full bg-revive-emerald animate-ping"></span>
+          </div>
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="text-[10px] font-mono tracking-widest px-2 py-0.5 rounded bg-revive-emerald/20 text-revive-emerald font-bold border border-revive-emerald/40 uppercase">MERZ AESTHETICS®</span>
+            </div>
+            <h1 class="text-base sm:text-lg md:text-2xl font-black tracking-tight text-white flex flex-wrap items-center gap-1.5 sm:gap-2 font-display mt-0.5">
+              <span>BELOTERO <span class="text-revive-emerald">REVIVE®</span></span>
+              <span class="text-[11px] sm:text-xs md:text-sm font-mono font-medium text-slate-300">STRATEGIC COMMAND HUB</span>
+            </h1>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Action Controls & View Switcher -->
+      <div class="flex items-center justify-between sm:justify-end gap-2 flex-wrap">
+        <!-- View Switcher (Orbit, Matrix, Calendar, AI Insight) -->
+        <div class="bg-cosmic-950 p-1 rounded-xl border border-revive-emerald/30 flex items-center gap-1 font-mono text-[11px] sm:text-xs overflow-x-auto max-w-full">
+          <button id="btn-view-orbit" class="px-2.5 sm:px-3 py-1.5 sm:py-2 rounded-lg flex items-center gap-1.5 transition font-bold bg-revive-emerald text-black shadow-[0_0_15px_rgba(0,242,178,0.4)] whitespace-nowrap">
+            <i data-lucide="orbit" class="w-3.5 h-3.5"></i> COSMIC ORBIT
+          </button>
+          <button id="btn-view-matrix" class="px-2.5 sm:px-3 py-1.5 sm:py-2 rounded-lg flex items-center gap-1.5 transition font-bold text-slate-300 hover:text-white whitespace-nowrap">
+            <i data-lucide="table-properties" class="w-3.5 h-3.5"></i> 4-MEMBER MATRIX
+          </button>
+          <button id="btn-view-calendar" class="px-2.5 sm:px-3 py-1.5 sm:py-2 rounded-lg flex items-center gap-1.5 transition font-bold text-slate-300 hover:text-white whitespace-nowrap">
+            <i data-lucide="calendar" class="w-3.5 h-3.5"></i> CALENDAR
+          </button>
+          <button id="btn-view-insight" class="px-2.5 sm:px-3 py-1.5 sm:py-2 rounded-lg flex items-center gap-1.5 transition font-bold text-slate-300 hover:text-white whitespace-nowrap">
+            <i data-lucide="brain-circuit" class="w-3.5 h-3.5 text-revive-emerald"></i> AI INSIGHT
+          </button>
+        </div>
+
+        <!-- Add Account & Data Tools -->
+        <div class="flex items-center gap-1.5">
+          <button id="quick-add-btn" class="px-3 sm:px-4 py-2 rounded-xl bg-revive-emerald text-black font-mono font-bold text-xs flex items-center gap-1.5 hover:bg-revive-mint transition shadow-[0_0_15px_rgba(0,242,178,0.3)] whitespace-nowrap">
+            <i data-lucide="plus" class="w-4 h-4"></i> 거래처 신규 등록
+          </button>
+          <button id="export-json-btn" class="p-2 rounded-xl bg-cosmic-900 border border-revive-emerald/30 text-slate-300 hover:text-white hover:border-revive-emerald transition" title="JSON 데이터 백업">
+            <i data-lucide="download" class="w-4 h-4"></i>
+          </button>
+          <label class="p-2 rounded-xl bg-cosmic-900 border border-revive-emerald/30 text-slate-300 hover:text-white hover:border-revive-emerald transition cursor-pointer" title="JSON 데이터 복원">
+            <i data-lucide="upload" class="w-4 h-4"></i>
+            <input type="file" id="import-json-input" class="hidden" accept=".json">
+          </label>
+        </div>
+      </div>
+    </header>
+
+    <!-- ============================================================== -->
+    <!-- COMPACT EXECUTIVE HERO STATUS BAR (D-Day Countdown & RBS KPI)  -->
+    <!-- ============================================================== -->
+    <section class="w-full grid grid-cols-1 lg:grid-cols-12 gap-3">
+      
+      <!-- HERO ITEM A: COMPACT 3D CYBER FLIP D-DAY TIMER (7 Cols) -->
+      <div class="lg:col-span-7 command-panel rounded-xl px-4 py-2.5 flex flex-col sm:flex-row items-center justify-between gap-3 border-l-4 border-l-revive-emerald">
+        <div class="flex flex-col justify-center w-full sm:w-auto text-center sm:text-left">
+          <div class="flex items-center justify-center sm:justify-start gap-2">
+            <span class="w-2.5 h-2.5 rounded-full bg-revive-emerald animate-ping"></span>
+            <span class="text-xs font-mono font-bold uppercase tracking-widest text-revive-emerald">D-DAY COUNTDOWN</span>
+          </div>
+          <div class="font-mono text-[11px] text-slate-400 mt-0.5">
+            TARGET: <span class="text-white font-bold">2027.06.30 23:59 KST</span>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-4 gap-2 w-full sm:w-auto">
+          <!-- Days -->
+          <div class="flip-digit px-2 sm:px-3 py-1.5 rounded-lg text-center min-w-[60px] sm:min-w-[68px]">
+            <span id="flip-d" class="font-display text-base sm:text-lg md:text-2xl font-black text-revive-emerald tracking-wider block leading-tight">000</span>
+            <span class="text-[9px] font-mono font-bold tracking-widest text-slate-400 uppercase block">DAYS</span>
+          </div>
+          <!-- Hours -->
+          <div class="flip-digit px-2 sm:px-3 py-1.5 rounded-lg text-center min-w-[54px] sm:min-w-[60px]">
+            <span id="flip-h" class="font-display text-base sm:text-lg md:text-2xl font-black text-revive-mint tracking-wider block leading-tight">00</span>
+            <span class="text-[9px] font-mono font-bold tracking-widest text-slate-400 uppercase block">HRS</span>
+          </div>
+          <!-- Minutes -->
+          <div class="flip-digit px-2 sm:px-3 py-1.5 rounded-lg text-center min-w-[54px] sm:min-w-[60px]">
+            <span id="flip-m" class="font-display text-base sm:text-lg md:text-2xl font-black text-white tracking-wider block leading-tight">00</span>
+            <span class="text-[9px] font-mono font-bold tracking-widest text-slate-400 uppercase block">MIN</span>
+          </div>
+          <!-- Seconds -->
+          <div class="flip-digit px-2 sm:px-3 py-1.5 rounded-lg text-center min-w-[54px] sm:min-w-[60px]">
+            <span id="flip-s" class="font-display text-base sm:text-lg md:text-2xl font-black text-revive-cyan tracking-wider block leading-tight">00</span>
+            <span class="text-[9px] font-mono font-bold tracking-widest text-slate-400 uppercase block">SEC</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- HERO ITEM B: COMPACT MASTER KPI GAUGE (5 Cols - CLICKABLE) -->
+      <div id="kpi-hero-card" class="lg:col-span-5 command-panel rounded-xl px-4 py-2.5 flex items-center justify-between gap-3 sm:gap-4 border-r-4 border-r-revive-cyan cursor-pointer group hover:border-revive-emerald transition duration-200" title="클릭하여 10대 세부 지표 확인 및 조정">
+        
+        <!-- Compact High-Visibility SVG Ring Gauge -->
+        <div class="relative w-14 h-14 sm:w-16 sm:h-16 flex-shrink-0 flex items-center justify-center">
+          <svg class="w-full h-full -rotate-90" viewBox="0 0 36 36">
+            <path class="text-cosmic-800" stroke-width="4" stroke="currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+            <path id="kpi-ring-progress" class="text-revive-emerald transition-all duration-700" stroke-dasharray="0, 100" stroke-width="4.2" stroke-linecap="round" stroke="currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+          </svg>
+          <div class="absolute inset-0 flex flex-col items-center justify-center text-center">
+            <span id="kpi-ring-text" class="font-display text-[11px] sm:text-xs font-black text-white leading-none">0.0%</span>
+          </div>
+        </div>
+
+        <!-- KPI Executive Summary & Action Trigger -->
+        <div class="flex-1 flex items-center justify-between gap-2">
+          <div>
+            <div class="flex items-center gap-1.5 text-xs font-mono text-revive-mint uppercase font-bold tracking-wider">
+              <i data-lucide="shield-check" class="w-4 h-4 text-revive-emerald"></i>
+              RBS MASTER KPI
+            </div>
+            <p class="text-[11px] text-slate-300 mt-0.5">
+              10대 전략 지표 가중치 실시간 합산
+            </p>
+          </div>
+
+          <button id="open-kpi-modal-btn" class="py-2 px-3 rounded-lg bg-revive-emerald/15 hover:bg-revive-emerald border border-revive-emerald text-revive-emerald hover:text-black font-mono font-bold text-xs flex items-center gap-1.5 transition duration-200 whitespace-nowrap">
+            <i data-lucide="sliders" class="w-3.5 h-3.5"></i> KPI 상세/조정
+          </button>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ============================================================== -->
+    <!-- VIEW 1: COSMIC ORBIT (마인드맵 허브 - 모바일/데스크톱 완벽 대응)-->
+    <!-- 4 TYPES: S/A, S/C, L/A, L/C                                    -->
+    <!-- ============================================================== -->
+    <main id="view-orbit" class="relative flex-1 flex flex-col justify-center items-center py-2">
+      
+      <!-- Section Header -->
+      <div class="w-full flex flex-col sm:flex-row justify-between sm:items-center px-2 mb-3 gap-1 font-mono text-[11px] sm:text-xs">
+        <div class="text-slate-300 flex items-center gap-2 font-bold">
+          <i data-lucide="crosshair" class="w-4 h-4 text-revive-emerald flex-shrink-0"></i>
+          <span>QUAD-SECTOR 4 TYPES // 각 TYPE을 클릭하여 거래처 리스트 및 세부 내용을 관리하세요</span>
+        </div>
+        <div class="text-slate-400">
+          S: SHORT-TERM · L: LONG-TERM · A: ACADEMIC · C: COMMERCIAL
+        </div>
+      </div>
+
+      <!-- Main Orbital Canvas Frame (Responsive: Flex/Grid on Mobile, Orbital Map on MD+) -->
+      <div class="relative w-full md:h-[620px] flex flex-col md:block items-center justify-between gap-5 py-2 md:py-0">
+        
+        <!-- Concentric Orbital SVG Laser Vectors (Visible on Desktop/Tablet MD+) -->
+        <svg class="hidden md:block absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 1000 700">
+          <defs>
+            <linearGradient id="beamEmerald" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#00f2b2" stop-opacity="0.9" />
+              <stop offset="100%" stop-color="#02090b" stop-opacity="0.1" />
+            </linearGradient>
+            <linearGradient id="beamGold" x1="50%" y1="0%" x2="50%" y2="100%">
+              <stop offset="0%" stop-color="#ffd159" stop-opacity="1" />
+              <stop offset="100%" stop-color="#00f2b2" stop-opacity="0.4" />
+            </linearGradient>
+          </defs>
+
+          <!-- Elliptical Orbit Paths -->
+          <ellipse cx="500" cy="360" rx="440" ry="280" fill="none" stroke="rgba(0, 242, 178, 0.18)" stroke-width="1.5" stroke-dasharray="6, 8" class="animate-spin-slow" />
+          <ellipse cx="500" cy="360" rx="290" ry="185" fill="none" stroke="rgba(56, 189, 248, 0.22)" stroke-width="1.5" stroke-dasharray="10, 10" class="animate-spin-reverse" />
+
+          <!-- Vertical Gold Energy Tether from Top-Center COMPLETED WORMHOLE to Central REVIVE CORE -->
+          <line x1="500" y1="95" x2="500" y2="360" stroke="url(#beamGold)" stroke-width="3" stroke-dasharray="6,4" />
+          <circle cx="500" cy="215" r="4" fill="#ffd159" class="animate-ping" />
+
+          <!-- Dynamic Connecting Vectors to 4 TYPE Nodes -->
+          <line x1="500" y1="360" x2="210" y2="140" stroke="url(#beamEmerald)" stroke-width="2" stroke-dasharray="4,4" />
+          <line x1="500" y1="360" x2="790" y2="140" stroke="url(#beamEmerald)" stroke-width="2" stroke-dasharray="4,4" />
+          <line x1="500" y1="360" x2="210" y2="560" stroke="url(#beamEmerald)" stroke-width="2" stroke-dasharray="4,4" />
+          <line x1="500" y1="360" x2="790" y2="560" stroke="url(#beamEmerald)" stroke-width="2" stroke-dasharray="4,4" />
+        </svg>
+
+        <!-- TOP-CENTER PRESTIGIOUS COMPLETED GOLD WORMHOLE HUB (Directly Above REVIVE CORE) -->
+        <div class="md:absolute md:top-2 md:left-1/2 md:-translate-x-1/2 z-30 flex flex-col items-center w-full sm:w-auto">
+          <button id="open-wormhole-btn" class="w-full sm:w-auto justify-center group relative command-panel-gold hex-chamfer-lg px-5 sm:px-7 py-3.5 flex items-center gap-4 border-2 border-wormhole-gold shadow-[0_0_40px_rgba(255,209,89,0.45)] hover:shadow-[0_0_60px_rgba(255,209,89,0.8)] hover:scale-105 transition duration-300 cursor-pointer" title="완결 거래처 전용 골드 웜홀 아카이브 열기">
+            <!-- Pulsing Golden Singularity Aura -->
+            <div class="absolute -inset-2 rounded-full bg-amber-400/20 blur-xl animate-pulse pointer-events-none"></div>
+            
+            <!-- Rotating Singularity Core Icon -->
+            <div class="relative w-11 h-11 sm:w-12 sm:h-12 flex items-center justify-center flex-shrink-0">
+              <div class="absolute inset-0 rounded-full border-2 border-dashed border-yellow-300 animate-spin-slow"></div>
+              <div class="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-gradient-to-tr from-amber-500 via-yellow-400 to-yellow-200 flex items-center justify-center text-black shadow-[0_0_20px_rgba(255,209,89,0.9)]">
+                <i data-lucide="sparkles" class="w-5 h-5"></i>
+              </div>
+            </div>
+
+            <!-- Prestigious Text Readout -->
+            <div class="text-left font-mono relative z-10">
+              <div class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-yellow-300 animate-ping"></span>
+                <span class="text-[10px] sm:text-[11px] text-yellow-300 font-display font-black tracking-widest uppercase">COMPLETED WORMHOLE</span>
+              </div>
+              <div class="text-base sm:text-lg font-display font-black text-white tracking-wider mt-0.5 flex items-center gap-1.5">
+                <span id="wormhole-count" class="text-yellow-300">0</span>
+                <span class="text-xs sm:text-sm font-mono font-extrabold text-amber-200">ACCOUNT COMPLETE</span>
+              </div>
+            </div>
+
+            <i data-lucide="chevron-right" class="w-4 h-4 text-yellow-300 group-hover:translate-x-1 transition"></i>
+          </button>
+        </div>
+
+        <!-- CENTER REVIVE PULSAR CORE -->
+        <div id="center-core" class="md:absolute md:top-1/2 md:left-1/2 md:-translate-x-1/2 md:-translate-y-1/2 relative z-20 flex flex-col items-center justify-center cursor-pointer group my-2 md:my-0 md:mt-6" title="4-MEMBER MATRIX 뷰로 전환">
+          <!-- Pulsing Halos -->
+          <div class="absolute w-44 h-44 sm:w-52 sm:h-52 rounded-full bg-revive-emerald/15 blur-2xl animate-pulse pointer-events-none"></div>
+          <div class="absolute w-36 h-36 sm:w-44 sm:h-44 rounded-full border-2 border-dashed border-revive-emerald/40 animate-spin-slow pointer-events-none"></div>
+          <div class="absolute w-32 h-32 sm:w-36 sm:h-36 rounded-full border border-revive-cyan/40 animate-spin-reverse pointer-events-none"></div>
+          
+          <!-- Core Sphere -->
+          <div class="relative w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-gradient-to-tr from-cosmic-950 via-cosmic-850 to-cosmic-800 border-2 border-revive-emerald flex flex-col items-center justify-center shadow-[0_0_35px_rgba(0,242,178,0.5)] transform transition duration-300 group-hover:scale-110">
+            <i data-lucide="zap" class="w-6 h-6 sm:w-7 sm:h-7 text-revive-emerald mb-1"></i>
+            <span class="text-xs font-display font-black tracking-widest text-white">REVIVE</span>
+            <span class="text-[10px] font-mono text-revive-mint font-bold tracking-wider">CORE HUB</span>
+          </div>
+
+          <div class="mt-3 px-4 py-1.5 rounded-full bg-cosmic-950 border border-revive-emerald/50 text-xs font-mono font-bold text-white shadow-lg flex items-center gap-2">
+            <span class="tracking-widest text-slate-300">ACCOUNTS</span>
+            <span id="center-total-accounts" class="text-revive-emerald font-display font-black text-base">0</span>
+          </div>
+        </div>
+
+        <!-- ============================================== -->
+        <!-- 4 TYPES (S/A, S/C, L/A, L/C)                   -->
+        <!-- S: SHORT-TERM / L: LONG-TERM                   -->
+        <!-- A: ACADEMIC   / C: COMMERCIAL                  -->
+        <!-- ============================================== -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 w-full md:contents">
+
+          <!-- TYPE 1: S/A (Short-Term Academic) -->
+          <div class="md:absolute md:top-6 md:left-6 z-20 cursor-pointer node-card" data-segment="SA">
+            <div class="hex-chamfer-lg command-panel p-4 sm:p-5 w-full md:w-72 border-l-4 border-l-revive-emerald transition transform hover:scale-105 hover:border-revive-emerald">
+              <div class="flex items-center justify-between font-mono text-xs mb-2">
+                <span class="text-revive-emerald font-bold tracking-wider">TYPE 01</span>
+                <span class="px-2 py-0.5 rounded bg-revive-emerald/20 text-revive-emerald font-bold" id="count-SA">0 ACCS</span>
+              </div>
+              
+              <h3 class="text-2xl sm:text-3xl font-display font-black text-white tracking-wider mb-1">S/A</h3>
+              <div class="text-xs font-mono font-bold text-revive-mint tracking-wide">SHORT-TERM / ACADEMIC</div>
+            </div>
+          </div>
+
+          <!-- TYPE 2: S/C (Short-Term Commercial) -->
+          <div class="md:absolute md:top-6 md:right-6 z-20 cursor-pointer node-card" data-segment="SC">
+            <div class="hex-chamfer-lg command-panel p-4 sm:p-5 w-full md:w-72 border-r-4 border-r-teal-400 transition transform hover:scale-105 hover:border-teal-400">
+              <div class="flex items-center justify-between font-mono text-xs mb-2">
+                <span class="text-teal-400 font-bold tracking-wider">TYPE 02</span>
+                <span class="px-2 py-0.5 rounded bg-teal-500/20 text-teal-300 font-bold" id="count-SC">0 ACCS</span>
+              </div>
+              
+              <h3 class="text-2xl sm:text-3xl font-display font-black text-white tracking-wider mb-1">S/C</h3>
+              <div class="text-xs font-mono font-bold text-teal-300 tracking-wide">SHORT-TERM / COMMERCIAL</div>
+            </div>
+          </div>
+
+          <!-- TYPE 3: L/A (Long-Term Academic) -->
+          <div class="md:absolute md:bottom-6 md:left-6 z-20 cursor-pointer node-card" data-segment="LA">
+            <div class="hex-chamfer-lg command-panel p-4 sm:p-5 w-full md:w-72 border-l-4 border-l-cyan-400 transition transform hover:scale-105 hover:border-cyan-400">
+              <div class="flex items-center justify-between font-mono text-xs mb-2">
+                <span class="text-cyan-400 font-bold tracking-wider">TYPE 03</span>
+                <span class="px-2 py-0.5 rounded bg-cyan-500/20 text-cyan-300 font-bold" id="count-LA">0 ACCS</span>
+              </div>
+              
+              <h3 class="text-2xl sm:text-3xl font-display font-black text-white tracking-wider mb-1">L/A</h3>
+              <div class="text-xs font-mono font-bold text-cyan-300 tracking-wide">LONG-TERM / ACADEMIC</div>
+            </div>
+          </div>
+
+          <!-- TYPE 4: L/C (Long-Term Commercial) -->
+          <div class="md:absolute md:bottom-6 md:right-6 z-20 cursor-pointer node-card" data-segment="LC">
+            <div class="hex-chamfer-lg command-panel p-4 sm:p-5 w-full md:w-72 border-r-4 border-r-indigo-400 transition transform hover:scale-105 hover:border-indigo-400">
+              <div class="flex items-center justify-between font-mono text-xs mb-2">
+                <span class="text-indigo-400 font-bold tracking-wider">TYPE 04</span>
+                <span class="px-2 py-0.5 rounded bg-indigo-500/20 text-indigo-300 font-bold" id="count-LC">0 ACCS</span>
+              </div>
+              
+              <h3 class="text-2xl sm:text-3xl font-display font-black text-white tracking-wider mb-1">L/C</h3>
+              <div class="text-xs font-mono font-bold text-indigo-300 tracking-wide">LONG-TERM / COMMERCIAL</div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </main>
+
+    <!-- ============================================================== -->
+    <!-- VIEW 2: 4-MEMBER MATRIX VIEW (팀 협업 매트릭스)                -->
+    <!-- ============================================================== -->
+    <main id="view-matrix" class="hidden flex-1 flex flex-col gap-4">
+      
+      <!-- Multi-Filter and Member Bar -->
+      <div class="command-panel p-4 rounded-2xl flex flex-col gap-3.5">
+        
+        <!-- Member Tabs (👑 LEADER, 용우 (TM), 우진 (TM), 윤 (RBS)) -->
+        <div class="flex items-center justify-between flex-wrap gap-2 pb-3 border-b border-cosmic-800">
+          <div class="flex items-center gap-2 overflow-x-auto max-w-full pb-1 sm:pb-0" id="member-tabs">
+            <button class="member-tab px-3.5 sm:px-4 py-2 rounded-xl text-xs font-mono font-bold transition flex items-center gap-2 bg-revive-emerald text-black shadow-[0_0_15px_rgba(0,242,178,0.3)] whitespace-nowrap" data-member="LEADER">
+              <span>👑 LEADER</span>
+            </button>
+            <button class="member-tab px-3.5 sm:px-4 py-2 rounded-xl text-xs font-mono font-bold transition flex items-center gap-2 bg-cosmic-950 text-slate-300 hover:text-white border border-cosmic-800 whitespace-nowrap" data-member="용우">
+              <i data-lucide="user-check" class="w-4 h-4 text-revive-emerald"></i> 용우 (TM)
+            </button>
+            <button class="member-tab px-3.5 sm:px-4 py-2 rounded-xl text-xs font-mono font-bold transition flex items-center gap-2 bg-cosmic-950 text-slate-300 hover:text-white border border-cosmic-800 whitespace-nowrap" data-member="우진">
+              <i data-lucide="user-check" class="w-4 h-4 text-cyan-400"></i> 우진 (TM)
+            </button>
+            <button class="member-tab px-3.5 sm:px-4 py-2 rounded-xl text-xs font-mono font-bold transition flex items-center gap-2 bg-cosmic-950 text-slate-300 hover:text-white border border-cosmic-800 whitespace-nowrap" data-member="윤">
+              <i data-lucide="sparkles" class="w-4 h-4 text-amber-400"></i> 윤 (RBS)
+            </button>
+          </div>
+
+          <div class="text-xs font-mono text-slate-400 flex items-center gap-1.5">
+            <span class="text-revive-emerald font-bold" id="matrix-filtered-count">0</span> ACCOUNTS
+          </div>
+        </div>
+
+        <!-- Real-Time Multi-Filter Row -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-6 gap-2.5 items-center">
+          
+          <!-- Search -->
+          <div class="md:col-span-2 relative">
+            <i data-lucide="search" class="w-4 h-4 absolute left-3 top-2.5 text-slate-400"></i>
+            <input type="text" id="matrix-search" placeholder="병원명, 원장/키맨, 메모 검색..." class="w-full bg-cosmic-950 border border-cosmic-800 focus:border-revive-emerald rounded-xl pl-9 pr-3 py-2 text-xs text-white placeholder-slate-500 focus:outline-none">
+          </div>
+
+          <!-- Filter 1: TYPE -->
+          <div>
+            <select id="matrix-filter-segment" class="w-full bg-cosmic-950 border border-cosmic-800 focus:border-revive-emerald rounded-xl px-2.5 py-2 text-xs text-white focus:outline-none font-mono">
+              <option value="ALL">전략 TYPE: 전체</option>
+              <option value="SA">S/A (SHORT-TERM / ACADEMIC)</option>
+              <option value="SC">S/C (SHORT-TERM / COMMERCIAL)</option>
+              <option value="LA">L/A (LONG-TERM / ACADEMIC)</option>
+              <option value="LC">L/C (LONG-TERM / COMMERCIAL)</option>
+            </select>
+          </div>
+
+          <!-- Filter 2: TM OWNER -->
+          <div>
+            <select id="matrix-filter-owner" class="w-full bg-cosmic-950 border border-cosmic-800 focus:border-revive-emerald rounded-xl px-2.5 py-2 text-xs text-white focus:outline-none font-mono">
+              <option value="ALL">TM: 전체</option>
+              <option value="용우">용우 (TM)</option>
+              <option value="우진">우진 (TM)</option>
+            </select>
+          </div>
+
+          <!-- Filter 3: STATUS -->
+          <div>
+            <select id="matrix-filter-status" class="w-full bg-cosmic-950 border border-cosmic-800 focus:border-revive-emerald rounded-xl px-2.5 py-2 text-xs text-white focus:outline-none font-mono">
+              <option value="ALL">파이프라인 상태: 전체</option>
+              <option value="CONTACT">1. 접촉 (CONTACT)</option>
+              <option value="PITCHING">2. 피칭 (PITCHING)</option>
+              <option value="SAMPLING">3. 샘플링 (SAMPLING)</option>
+              <option value="ONBOARDING">4. 온보딩 (ONBOARDING)</option>
+              <option value="COMPLETE">⭐ 완결 (COMPLETE)</option>
+            </select>
+          </div>
+
+          <!-- Reset Button -->
+          <div class="flex items-center">
+            <button id="matrix-reset-filters-btn" class="w-full px-3 py-2 rounded-xl bg-cosmic-900 border border-cosmic-700 hover:border-red-400 text-slate-300 hover:text-red-300 text-xs font-mono font-bold flex items-center justify-center gap-1.5 transition whitespace-nowrap" title="모든 필터 초기화">
+              <i data-lucide="rotate-ccw" class="w-3.5 h-3.5"></i> RESET ALL FILTERS
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- High-Legibility Matrix Data Table -->
+      <div class="command-panel rounded-2xl overflow-hidden flex-1 flex flex-col">
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-xs border-collapse min-w-[880px]">
+            <thead>
+              <tr class="bg-cosmic-950 border-b border-cosmic-800 text-slate-300 font-mono tracking-wider">
+                <th class="p-3.5">병원 / 거래처</th>
+                <th class="p-3.5 w-28">TYPE</th>
+                <th class="p-3.5">원장 / 키맨</th>
+                <th class="p-3.5 w-32">TM OWNER</th>
+                <th class="p-3.5">ACTIVITY 진행 현황</th>
+                <th class="p-3.5 w-40">진행 상태</th>
+                <th class="p-3.5 min-w-[240px]" id="matrix-note-header">👑 LEADER 메모 & 액션 플랜</th>
+                <th class="p-3.5 text-center w-20">관리</th>
+              </tr>
+            </thead>
+            <tbody id="matrix-table-body" class="divide-y divide-cosmic-800 text-sm font-sans">
+              <!-- Dynamically rendered -->
+            </tbody>
+          </table>
+        </div>
+        <div id="matrix-empty" class="hidden p-16 text-center text-slate-400 flex flex-col items-center justify-center font-mono">
+          <i data-lucide="inbox" class="w-12 h-12 text-slate-600 mb-3"></i>
+          <p class="text-sm">해당 조건에 일치하는 거래처가 없습니다.</p>
+          <button id="matrix-empty-reset-btn" class="mt-3 px-3 py-1.5 rounded-lg bg-revive-emerald/20 text-revive-emerald border border-revive-emerald/40 text-xs">
+            RESET ALL FILTERS
+          </button>
+        </div>
+      </div>
+
+    </main>
+
+    <!-- ============================================================== -->
+    <!-- VIEW 3: CALENDAR VIEW (거래처별 일정 관리 및 스케줄러)         -->
+    <!-- ============================================================== -->
+    <main id="view-calendar" class="hidden flex-1 flex flex-col gap-4">
+      <div class="command-panel p-4 rounded-2xl flex flex-wrap justify-between items-center gap-3">
+        <div class="flex items-center gap-3">
+          <div class="p-2.5 rounded-xl bg-revive-emerald/20 text-revive-emerald">
+            <i data-lucide="calendar-days" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <h2 class="text-base font-display font-bold text-white flex flex-wrap items-center gap-2">
+              <span>B2B STRATEGIC CALENDAR</span>
+              <span class="text-xs font-mono text-revive-mint px-2 py-0.5 rounded bg-cosmic-950 border border-cosmic-800">거래처별 세부 일정 얼라인</span>
+            </h2>
+            <p class="text-xs text-slate-300 font-mono">원장 미팅, MEX 프로그램 세미나, 데모 핸즈온, 정기 방문 스케줄</p>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-2">
+          <button id="cal-prev-btn" class="p-2 rounded-lg bg-cosmic-950 border border-cosmic-800 hover:border-revive-emerald text-white">
+            <i data-lucide="chevron-left" class="w-4 h-4"></i>
+          </button>
+          <span id="cal-current-month" class="font-display font-bold text-sm text-revive-emerald px-2">2026. 11</span>
+          <button id="cal-next-btn" class="p-2 rounded-lg bg-cosmic-950 border border-cosmic-800 hover:border-revive-emerald text-white">
+            <i data-lucide="chevron-right" class="w-4 h-4"></i>
+          </button>
+          <button id="add-calendar-event-btn" class="ml-2 px-3.5 py-2 rounded-xl bg-revive-emerald text-black font-mono font-bold text-xs flex items-center gap-1.5 hover:bg-revive-mint transition shadow-[0_0_15px_rgba(0,242,178,0.3)]">
+            <i data-lucide="calendar-plus" class="w-4 h-4"></i> 일정 등록
+          </button>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-4">
+        <!-- Calendar Grid (8 cols) -->
+        <div class="lg:col-span-8 command-panel rounded-2xl p-3 sm:p-4 flex flex-col">
+          <div class="grid grid-cols-7 text-center font-mono text-xs font-bold text-slate-400 pb-2 border-b border-cosmic-800">
+            <div class="text-red-400">SUN</div>
+            <div>MON</div>
+            <div>TUE</div>
+            <div>WED</div>
+            <div>THU</div>
+            <div>FRI</div>
+            <div class="text-cyan-400">SAT</div>
+          </div>
+          <div id="calendar-days-grid" class="grid grid-cols-7 gap-1 pt-2 flex-1 min-h-[420px] sm:min-h-[460px]">
+            <!-- Injected dynamically -->
+          </div>
+        </div>
+
+        <!-- Selected Day Agenda & Upcoming (4 cols) -->
+        <div class="lg:col-span-4 command-panel rounded-2xl p-4 flex flex-col justify-between space-y-4">
+          <div>
+            <div class="flex items-center justify-between pb-2 border-b border-cosmic-800">
+              <span class="text-xs font-mono font-bold text-revive-emerald flex items-center gap-1.5">
+                <i data-lucide="clock" class="w-4 h-4"></i> SCHEDULED AGENDA
+              </span>
+              <span id="selected-date-label" class="text-xs font-mono text-white font-bold">선택 날짜: 오늘</span>
+            </div>
+            <div id="calendar-agenda-list" class="mt-3 space-y-2.5 overflow-y-auto max-h-[380px] pr-1">
+              <!-- Injected dynamically -->
+            </div>
+          </div>
+
+          <div class="p-3 bg-cosmic-950 rounded-xl border border-cosmic-800 text-xs font-mono text-slate-300">
+            <div class="text-revive-mint font-bold mb-1 flex items-center gap-1">
+              <i data-lucide="info" class="w-3.5 h-3.5"></i> 연동 팁:
+            </div>
+            거래처 상세(ACCOUNT DETAIL) 창에서 일정을 추가해도 이곳 캘린더에 실시간으로 즉시 반영됩니다.
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- ============================================================== -->
+    <!-- VIEW 4: AI STRATEGIC INSIGHT (전략 브리핑 및 AI 제안)         -->
+    <!-- ============================================================== -->
+    <main id="view-insight" class="hidden flex-1 flex flex-col gap-4">
+      <div class="command-panel p-4 rounded-2xl flex flex-wrap justify-between items-center gap-3 border-l-4 border-l-revive-emerald">
+        <div class="flex items-center gap-3">
+          <div class="p-2.5 rounded-xl bg-revive-emerald/20 text-revive-emerald">
+            <i data-lucide="brain-circuit" class="w-6 h-6 animate-pulse"></i>
+          </div>
+          <div>
+            <h2 class="text-base font-display font-bold text-white flex items-center gap-2">
+              BELOTERO REVIVE® AI STRATEGIC COMMAND INTELLIGENCE
+            </h2>
+            <p class="text-xs text-slate-300 font-mono">실시간 파이프라인 데이터 및 10대 RBS KPI 패턴 기반 AI 추천 전략</p>
+          </div>
+        </div>
+
+        <button id="refresh-insight-btn" class="px-3.5 py-2 rounded-xl bg-cosmic-900 border border-revive-emerald text-revive-emerald hover:bg-revive-emerald hover:text-black text-xs font-mono font-bold flex items-center gap-1.5 transition">
+          <i data-lucide="sparkles" class="w-4 h-4"></i> 분석 재실행 (REFRESH)
+        </button>
+      </div>
+
+      <!-- Insight Cards Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4" id="ai-insight-cards">
+        <!-- Rendered dynamically -->
+      </div>
+
+      <!-- In-depth Strategy & Team Directives -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-4">
+        <!-- Member Directives -->
+        <div class="lg:col-span-7 command-panel rounded-2xl p-5 space-y-4">
+          <div class="flex items-center justify-between border-b border-cosmic-800 pb-2">
+            <span class="text-xs font-mono font-bold text-revive-emerald flex items-center gap-1.5 uppercase">
+              <i data-lucide="terminal" class="w-4 h-4"></i> 4-MEMBER TACTICAL DIRECTIVES (팀원별 즉각 실행 권고사항)
+            </span>
+            <span class="text-[10px] font-mono text-slate-400">AI STRATEGY AGENT</span>
+          </div>
+          <div class="space-y-3" id="team-directives-container">
+            <!-- Dynamically injected -->
+          </div>
+        </div>
+
+        <!-- Pipeline BottleNeck & Activity Penetration Radar -->
+        <div class="lg:col-span-5 command-panel rounded-2xl p-5 flex flex-col justify-between space-y-4">
+          <div>
+            <div class="flex items-center justify-between border-b border-cosmic-800 pb-2 mb-3">
+              <span class="text-xs font-mono font-bold text-cyan-400 flex items-center gap-1.5 uppercase">
+                <i data-lucide="layers" class="w-4 h-4"></i> MERZ ACTIVITY PENETRATION RATE
+              </span>
+              <span class="text-[10px] font-mono text-slate-400">4대 프로그램</span>
+            </div>
+            <div class="space-y-3" id="activity-penetration-stats">
+              <!-- Dynamically injected -->
+            </div>
+          </div>
+
+          <div class="p-3.5 bg-cosmic-950 rounded-xl border border-revive-emerald/30">
+            <div class="text-xs font-mono font-bold text-revive-mint mb-1 flex items-center gap-1">
+              <i data-lucide="zap" class="w-4 h-4"></i> RBS 전략 총평
+            </div>
+            <p class="text-xs text-slate-300 leading-relaxed" id="rbs-ai-summary">
+              데이터를 계산 중입니다...
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- FOOTER STATUS -->
+    <footer class="w-full command-panel rounded-xl px-5 py-2.5 text-xs font-mono text-slate-400 flex flex-wrap justify-between items-center gap-3">
+      <div class="flex items-center gap-3">
+        <span class="flex items-center gap-1.5 text-revive-emerald font-bold">
+          <span class="w-2.5 h-2.5 rounded-full bg-revive-emerald animate-ping"></span>
+          COSMIC HUD ONLINE
+        </span>
+        <span class="text-slate-600">|</span>
+        <span>MERZ BELOTERO REVIVE® CORE ENGINE</span>
+      </div>
+      <div>
+        <span>로컬 브라우저 보안 스토리지 자동 저장 및 JSON 백업 지원</span>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- ============================================================== -->
+  <!-- MODAL: RBS MASTER 10대 핵심 KPI 엔진                           -->
+  <!-- ============================================================== -->
+  <div id="kpi-modal" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md hidden flex items-center justify-center p-3 sm:p-4">
+    <div class="command-panel w-full max-w-3xl rounded-2xl p-4 sm:p-6 max-h-[90vh] flex flex-col relative border-2 border-revive-emerald shadow-2xl">
+      
+      <!-- Header -->
+      <div class="flex items-center justify-between pb-4 border-b border-cosmic-800">
+        <div class="flex items-center gap-3">
+          <div class="p-2.5 rounded-xl bg-revive-emerald/20 text-revive-emerald">
+            <i data-lucide="sliders" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <h2 class="text-base sm:text-lg font-display font-bold text-white flex items-center gap-2">
+              RBS MASTER KPI SPECIFICATION <span class="text-xs font-mono px-2 py-0.5 rounded bg-revive-emerald/20 text-revive-emerald">10대 지표</span>
+            </h2>
+            <p class="text-xs text-slate-300 font-mono">실시간 가중치 자동 합산 엔진</p>
+          </div>
+        </div>
+        <button id="close-kpi-modal-btn" class="text-slate-400 hover:text-white p-1.5 rounded-lg hover:bg-cosmic-900">
+          <i data-lucide="x" class="w-6 h-6"></i>
+        </button>
+      </div>
+
+      <!-- Composite Gauge Display -->
+      <div class="py-3 sm:py-4 px-4 sm:px-5 my-3 sm:my-4 bg-cosmic-950 rounded-xl border border-cosmic-800 flex items-center justify-between gap-4">
+        <div>
+          <span class="text-xs font-mono text-slate-300 uppercase font-bold">종합 가중치 달성률</span>
+          <div class="text-2xl sm:text-3xl font-display font-black text-revive-emerald" id="modal-composite-score">0.0%</div>
+        </div>
+        <div class="w-40 sm:w-56 bg-cosmic-900 rounded-full h-3.5 p-0.5 border border-cosmic-700 overflow-hidden">
+          <div id="modal-composite-bar" class="h-full bg-gradient-to-r from-revive-teal to-revive-emerald rounded-full transition-all duration-300" style="width: 0%"></div>
+        </div>
+      </div>
+
+      <!-- 10 Metric Sliders -->
+      <div class="flex-1 overflow-y-auto pr-1 sm:pr-2 space-y-3" id="kpi-sliders-container">
+        <!-- Rendered dynamically -->
+      </div>
+
+      <!-- Footer -->
+      <div class="pt-4 border-t border-cosmic-800 flex justify-between items-center text-xs font-mono">
+        <button id="reset-kpi-btn" class="px-3.5 py-2 rounded-lg text-slate-400 hover:text-white hover:bg-cosmic-900 transition">
+          기본값으로 초기화
+        </button>
+        <button id="save-kpi-btn" class="px-6 py-2 rounded-xl bg-revive-emerald text-black font-bold hover:bg-revive-mint transition shadow-[0_0_15px_rgba(0,242,178,0.3)]">
+          적용 및 저장
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ============================================================== -->
+  <!-- MODAL: GOLD WORMHOLE COMPLETED HUB                             -->
+  <!-- ============================================================== -->
+  <div id="wormhole-modal" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md hidden flex items-center justify-center p-3 sm:p-4">
+    <div class="command-panel-gold w-full max-w-3xl rounded-2xl p-4 sm:p-6 max-h-[90vh] flex flex-col relative border-2 border-wormhole-gold shadow-2xl">
+      
+      <div class="flex items-center justify-between pb-4 border-b border-amber-500/30">
+        <div class="flex items-center gap-3">
+          <div class="p-2.5 rounded-xl bg-amber-500/20 text-yellow-300">
+            <i data-lucide="sparkles" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <h2 class="text-base sm:text-lg font-display font-bold text-yellow-300 flex items-center gap-2">
+              COMPLETED GOLD WORMHOLE HUB
+            </h2>
+            <p class="text-xs text-amber-200/90 font-mono">완결 거래처 및 영구 파트너십 아카이브</p>
+          </div>
+        </div>
+        <button id="close-wormhole-modal-btn" class="text-amber-300 hover:text-white p-1.5 rounded-lg">
+          <i data-lucide="x" class="w-6 h-6"></i>
+        </button>
+      </div>
+
+      <div class="flex-1 overflow-y-auto py-4 space-y-3" id="wormhole-list">
+        <!-- Rendered dynamically -->
+      </div>
+
+      <div class="pt-3 border-t border-amber-500/30 flex justify-between items-center text-xs font-mono text-amber-300/80">
+        <span>보관된 완결 거래처: <span id="wormhole-total-sub" class="font-bold text-white">0</span> 곳</span>
+        <span>STATUS: QUANTUM SEALED</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ============================================================== -->
+  <!-- SLIDE-OVER DRAWER: 거래처 리스트 (TYPE DIRECTORY)             -->
+  <!-- ============================================================== -->
+  <div id="drawer-backdrop" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden transition-opacity"></div>
+  
+  <div id="account-drawer" class="fixed top-0 right-0 h-full w-full max-w-xl command-panel border-l-2 border-revive-emerald z-50 transform translate-x-full transition-transform duration-300 flex flex-col shadow-2xl">
+    
+    <div class="p-4 sm:p-5 border-b border-cosmic-800 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="p-2.5 rounded-xl bg-revive-emerald/20 text-revive-emerald" id="drawer-node-badge">
+          <i data-lucide="crosshair" class="w-6 h-6"></i>
+        </div>
+        <div>
+          <h2 class="text-base font-display font-bold text-white tracking-wide" id="drawer-title">TYPE DIRECTORY</h2>
+          <p class="text-xs text-slate-300 font-mono" id="drawer-subtitle">진행 중인 B2B 파이프라인</p>
+        </div>
+      </div>
+      <button id="close-drawer-btn" class="text-slate-400 hover:text-white p-2 rounded-lg hover:bg-cosmic-900">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+    </div>
+
+    <!-- Actions & Hint -->
+    <div class="p-4 border-b border-cosmic-800 bg-cosmic-950 flex flex-col gap-2">
+      <div class="flex items-center justify-between gap-2.5">
+        <div class="relative flex-1">
+          <i data-lucide="search" class="w-4 h-4 absolute left-3 top-2.5 text-slate-400"></i>
+          <input type="text" id="drawer-search" placeholder="병원명 또는 키맨 검색..." class="w-full bg-cosmic-900 border border-cosmic-700 rounded-lg pl-9 pr-3 py-1.5 text-xs text-white focus:outline-none focus:border-revive-emerald">
+        </div>
+        <button id="drawer-add-account-btn" class="px-3.5 py-1.5 rounded-lg bg-revive-emerald text-black text-xs font-mono font-bold flex items-center gap-1 hover:bg-revive-mint transition whitespace-nowrap">
+          <i data-lucide="plus" class="w-3.5 h-3.5"></i> 거래처 등록
+        </button>
+      </div>
+      <div class="text-[11px] font-mono text-revive-mint/90 flex items-center gap-1">
+        <i data-lucide="info" class="w-3.5 h-3.5 flex-shrink-0"></i> 거래처 카드를 클릭하면 즉시 ACCOUNT DETAIL 작성/수정 창이 열립니다.
+      </div>
+    </div>
+
+    <div class="flex-1 overflow-y-auto p-4 space-y-3" id="drawer-accounts-list">
+      <!-- Injected dynamically -->
+    </div>
+
+  </div>
+
+  <!-- ============================================================== -->
+  <!-- MODAL: ACCOUNT DETAIL (거래처 세부 정보 및 ACTIVITY 관리)     -->
+  <!-- ============================================================== -->
+  <div id="account-form-modal" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md hidden flex items-center justify-center p-2.5 sm:p-4">
+    <div class="command-panel w-full max-w-2xl rounded-2xl p-4 sm:p-6 relative border-2 border-revive-emerald shadow-2xl max-h-[92vh] overflow-y-auto">
+      
+      <div class="flex items-center justify-between pb-3 border-b border-cosmic-800 mb-4">
+        <div>
+          <h3 class="text-base sm:text-lg font-display font-bold text-white flex items-center gap-2" id="account-form-title">
+            <i data-lucide="file-edit" class="w-5 h-5 text-revive-emerald"></i> ACCOUNT DETAIL
+          </h3>
+          <p class="text-xs text-slate-300 font-mono">거래처 상세 정보, MERZ ACTIVITY 진행 현황, 3인 메모 & 캘린더 일정 연동</p>
+        </div>
+        <button id="close-account-form-btn" class="text-slate-400 hover:text-white p-1 rounded-lg hover:bg-cosmic-900">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <form id="clinic-form" class="space-y-4 text-xs">
+        <input type="hidden" id="form-account-id">
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+          <div>
+            <label class="block text-slate-300 font-mono font-bold mb-1">거래처명 (ACCOUNT NAME) *</label>
+            <input type="text" id="form-name" required placeholder="예: 강남 리바이브 에스테틱 의원" class="w-full bg-cosmic-950 border border-cosmic-700 rounded-lg p-2.5 text-white focus:outline-none focus:border-revive-emerald">
+          </div>
+          <div>
+            <label class="block text-slate-300 font-mono font-bold mb-1">원장 / 키맨 (DIRECTOR)</label>
+            <input type="text" id="form-doctor" placeholder="예: 김원장 / 총괄실장" class="w-full bg-cosmic-950 border border-cosmic-700 rounded-lg p-2.5 text-white focus:outline-none focus:border-revive-emerald">
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+          <div>
+            <label class="block text-slate-300 font-mono font-bold mb-1">전략 TYPE *</label>
+            <select id="form-segment" required class="w-full bg-cosmic-950 border border-cosmic-700 rounded-lg p-2.5 text-white font-mono focus:outline-none focus:border-revive-emerald">
+              <option value="SA">S/A (SHORT-TERM / ACADEMIC)</option>
+              <option value="SC">S/C (SHORT-TERM / COMMERCIAL)</option>
+              <option value="LA">L/A (LONG-TERM / ACADEMIC)</option>
+              <option value="LC">L/C (LONG-TERM / COMMERCIAL)</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-slate-300 font-mono font-bold mb-1">TM OWNER *</label>
+            <select id="form-assignee" required class="w-full bg-cosmic-950 border border-cosmic-700 rounded-lg p-2.5 text-white font-mono focus:outline-none focus:border-revive-emerald font-bold text-revive-emerald">
+              <option value="용우">용우 (TM)</option>
+              <option value="우진">우진 (TM)</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-slate-300 font-mono font-bold mb-1">파이프라인 상태 (STATUS) *</label>
+            <select id="form-status" required class="w-full bg-cosmic-950 border border-cosmic-700 rounded-lg p-2.5 text-white font-mono focus:outline-none focus:border-revive-emerald">
+              <option value="CONTACT">1. 접촉 (CONTACT)</option>
+              <option value="PITCHING">2. 피칭 (PITCHING)</option>
+              <option value="SAMPLING">3. 샘플링 (SAMPLING)</option>
+              <option value="ONBOARDING">4. 온보딩 (ONBOARDING)</option>
+              <option value="COMPLETE">⭐ 완결 (COMPLETED WORMHOLE)</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- ACTIVITY 진행 상황 (4 Merz Programs) -->
+        <div class="bg-cosmic-950 p-3.5 sm:p-4 rounded-xl border border-revive-emerald/30 space-y-3">
+          <div class="flex items-center justify-between pb-2 border-b border-cosmic-800">
+            <span class="text-xs font-mono font-bold text-revive-emerald flex items-center gap-1.5">
+              <i data-lucide="layers" class="w-4 h-4"></i> ACTIVITY 진행 상황 (MERZ PROGRAM PROGRESS)
+            </span>
+            <span class="text-[10px] font-mono text-slate-400">진행 여부 체크 & 횟수 입력</span>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3">
+            <!-- 1. MEX-PRO -->
+            <div class="bg-cosmic-900/90 p-2.5 rounded-lg border border-cosmic-800 flex items-center justify-between">
+              <label class="flex items-center gap-2 cursor-pointer">
+                <input type="checkbox" id="form-act-mexpro" class="w-4 h-4 rounded accent-revive-emerald cursor-pointer">
+                <span class="font-mono font-bold text-white text-xs">MEX-PRO</span>
+              </label>
+              <div class="flex items-center gap-1">
+                <input type="number" id="form-act-mexpro-count" min="0" value="0" class="w-16 bg-cosmic-950 border border-cosmic-700 rounded px-2 py-1 text-right text-white font-mono font-bold text-xs focus:outline-none focus:border-revive-emerald">
+                <span class="text-slate-400 font-mono text-[11px]">회</span>
+              </div>
+            </div>
+
+            <!-- 2. MEX-TAILORED -->
+            <div class="bg-cosmic-900/90 p-2.5 rounded-lg border border-cosmic-800 flex items-center justify-between">
+              <label class="flex items-center gap-2 cursor-pointer">
+                <input type="checkbox" id="form-act-tailored" class="w-4 h-4 rounded accent-revive-emerald cursor-pointer">
+                <span class="font-mono font-bold text-white text-xs">MEX-TAILORED</span>
+              </label>
+              <div class="flex items-center gap-1">
+                <input type="number" id="form-act-tailored-count" min="0" value="0" class="w-16 bg-cosmic-950 border border-cosmic-700 rounded px-2 py-1 text-right text-white font-mono font-bold text-xs focus:outline-none focus:border-revive-emerald">
+                <span class="text-slate-400 font-mono text-[11px]">회</span>
+              </div>
+            </div>
+
+            <!-- 3. MEX-TALK -->
+            <div class="bg-cosmic-900/90 p-2.5 rounded-lg border border-cosmic-800 flex items-center justify-between">
+              <label class="flex items-center gap-2 cursor-pointer">
+                <input type="checkbox" id="form-act-mextalk" class="w-4 h-4 rounded accent-revive-emerald cursor-pointer">
+                <span class="font-mono font-bold text-white text-xs">MEX-TALK</span>
+              </label>
+              <div class="flex items-center gap-1">
+                <input type="number" id="form-act-mextalk-count" min="0" value="0" class="w-16 bg-cosmic-950 border border-cosmic-700 rounded px-2 py-1 text-right text-white font-mono font-bold text-xs focus:outline-none focus:border-revive-emerald">
+                <span class="text-slate-400 font-mono text-[11px]">회</span>
+              </div>
+            </div>
+
+            <!-- 4. S_S (Sales Seminar / 세미나) -->
+            <div class="bg-cosmic-900/90 p-2.5 rounded-lg border border-cosmic-800 flex items-center justify-between">
+              <label class="flex items-center gap-2 cursor-pointer">
+                <input type="checkbox" id="form-act-ss" class="w-4 h-4 rounded accent-revive-emerald cursor-pointer">
+                <span class="font-mono font-bold text-white text-xs">S_S</span>
+              </label>
+              <div class="flex items-center gap-1">
+                <input type="number" id="form-act-ss-count" min="0" value="0" class="w-16 bg-cosmic-950 border border-cosmic-700 rounded px-2 py-1 text-right text-white font-mono font-bold text-xs focus:outline-none focus:border-revive-emerald">
+                <span class="text-slate-400 font-mono text-[11px]">회</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3인 전용 협업 전략 메모 (👑 LEADER, 윤(RBS), 지정 TM OWNER) -->
+        <div class="bg-cosmic-950 p-3.5 sm:p-4 rounded-xl border border-cosmic-800 space-y-3">
+          <div class="flex flex-wrap items-center justify-between pb-1.5 border-b border-cosmic-800 gap-1">
+            <span class="text-xs font-mono font-bold text-revive-mint flex items-center gap-1.5">
+              <i data-lucide="message-square-text" class="w-4 h-4"></i> 3인 핵심 협업 메모 (👑 LEADER · 윤 RBS · 담당 TM OWNER)
+            </span>
+            <span class="text-[10px] font-mono text-amber-300">거래처 리스트에는 윤(RBS) 메모가 대표 노출됩니다</span>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+            <div>
+              <label class="block text-revive-emerald font-mono font-bold mb-1 text-[11px]">👑 LEADER 코멘트</label>
+              <textarea id="form-note-leader" rows="3" placeholder="리더 전략 지침 및 피드백..." class="w-full bg-cosmic-900 border border-cosmic-700 rounded-lg p-2 text-white focus:outline-none focus:border-revive-emerald"></textarea>
+            </div>
+            <div>
+              <label class="block text-amber-300 font-mono font-bold mb-1 text-[11px]">윤 (RBS) 부스팅 메모 ★</label>
+              <textarea id="form-note-yoon" rows="3" placeholder="RBS 학술/세미나 및 부스팅 전략 (리스트 대표 표시)..." class="w-full bg-cosmic-900 border border-amber-500/40 rounded-lg p-2 text-white focus:outline-none focus:border-amber-400"></textarea>
+            </div>
+            <div>
+              <label id="form-tm-note-label" class="block text-cyan-300 font-mono font-bold mb-1 text-[11px]">용우 (TM) 필드 메모</label>
+              <textarea id="form-note-tm" rows="3" placeholder="담당 TM 방문 기록 및 액션 플랜..." class="w-full bg-cosmic-900 border border-cosmic-700 rounded-lg p-2 text-white focus:outline-none focus:border-revive-emerald"></textarea>
+            </div>
+          </div>
+        </div>
+
+        <!-- 캘린더 연동 일정 추가 및 조회 (CALENDAR ALIGNMENT) -->
+        <div class="bg-cosmic-950 p-3.5 sm:p-4 rounded-xl border border-revive-cyan/30 space-y-3">
+          <div class="flex flex-wrap items-center justify-between pb-1.5 border-b border-cosmic-800 gap-1">
+            <span class="text-xs font-mono font-bold text-revive-cyan flex items-center gap-1.5">
+              <i data-lucide="calendar-plus" class="w-4 h-4"></i> 캘린더 일정 연동 (LINKED CALENDAR SCHEDULE)
+            </span>
+            <span class="text-[10px] font-mono text-slate-400">추가 즉시 CALENDAR 탭에 실시간 반영</span>
+          </div>
+
+          <!-- 등록된 해당 거래처 일정 리스트 -->
+          <div id="account-detail-events-list" class="space-y-1.5 max-h-32 overflow-y-auto pr-1">
+            <!-- Dynamically populated -->
+          </div>
+
+          <!-- 새 일정 인라인 추가 폼 -->
+          <div class="bg-cosmic-900/80 p-3 rounded-lg border border-cosmic-800 space-y-2.5">
+            <div class="text-[11px] font-mono text-revive-mint font-bold">+ 이 거래처의 신규 일정 바로 등록</div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-2">
+              <div>
+                <label class="block text-[10px] font-mono text-slate-400 mb-0.5">날짜</label>
+                <input type="date" id="detail-ev-date" class="w-full bg-cosmic-950 border border-cosmic-700 rounded px-2 py-1.5 text-white font-mono text-xs focus:outline-none focus:border-revive-emerald">
+              </div>
+              <div>
+                <label class="block text-[10px] font-mono text-slate-400 mb-0.5">시간</label>
+                <input type="time" id="detail-ev-time" value="14:00" class="w-full bg-cosmic-950 border border-cosmic-700 rounded px-2 py-1.5 text-white font-mono text-xs focus:outline-none focus:border-revive-emerald">
+              </div>
+              <div>
+                <label class="block text-[10px] font-mono text-slate-400 mb-0.5">구분</label>
+                <select id="detail-ev-type" class="w-full bg-cosmic-950 border border-cosmic-700 rounded px-2 py-1.5 text-white font-mono text-xs focus:outline-none focus:border-revive-emerald">
+                  <option value="MEETING">원장 미팅</option>
+                  <option value="DEMO">핸즈온 데모 / 시술</option>
+                  <option value="SEMINAR">MEX 세미나 / S_S</option>
+                  <option value="VISIT">정기 라운딩 / 납품</option>
+                </select>
+              </div>
+              <div>
+                <label class="block text-[10px] font-mono text-slate-400 mb-0.5">담당자</label>
+                <select id="detail-ev-attendee" class="w-full bg-cosmic-950 border border-cosmic-700 rounded px-2 py-1.5 text-white font-mono text-xs focus:outline-none focus:border-revive-emerald">
+                  <option value="용우">용우 (TM)</option>
+                  <option value="우진">우진 (TM)</option>
+                  <option value="윤">윤 (RBS)</option>
+                  <option value="ALL">전체 공동</option>
+                </select>
+              </div>
+            </div>
+            <div class="flex flex-col sm:flex-row gap-2">
+              <input type="text" id="detail-ev-title" placeholder="일정 제목 / 안건 입력 (예: 원장님 MEX-PRO 브리핑 및 샘플 전달)" class="flex-1 bg-cosmic-950 border border-cosmic-700 rounded px-2.5 py-1.5 text-white text-xs focus:outline-none focus:border-revive-emerald">
+              <button type="button" id="detail-add-ev-btn" class="px-3.5 py-1.5 rounded-lg bg-revive-cyan/20 hover:bg-revive-cyan text-revive-cyan hover:text-black border border-revive-cyan/50 font-mono font-bold text-xs transition whitespace-nowrap">
+                + 일정 추가
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-3 flex justify-between items-center gap-2 font-mono">
+          <button type="button" id="delete-account-modal-btn" class="px-3.5 py-2 rounded-lg bg-red-500/15 text-red-400 border border-red-500/30 hover:bg-red-500/30 hidden">거래처 삭제</button>
+          <div class="flex gap-2 ml-auto">
+            <button type="button" id="cancel-account-form-btn" class="px-4 py-2 rounded-lg bg-cosmic-900 text-slate-300 hover:text-white">취소</button>
+            <button type="submit" class="px-6 py-2 rounded-lg bg-revive-emerald text-black font-bold hover:bg-revive-mint shadow-[0_0_15px_rgba(0,242,178,0.3)]">저장 완료</button>
+          </div>
+        </div>
+      </form>
+
+    </div>
+  </div>
+
+  <!-- ============================================================== -->
+  <!-- MODAL: CALENDAR EVENT DETAIL (거래처 일정 등록)                 -->
+  <!-- ============================================================== -->
+  <div id="calendar-event-modal" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md hidden flex items-center justify-center p-3 sm:p-4">
+    <div class="command-panel w-full max-w-lg rounded-2xl p-5 sm:p-6 relative border-2 border-revive-emerald shadow-2xl">
+      <div class="flex items-center justify-between pb-3 border-b border-cosmic-800 mb-4">
+        <div>
+          <h3 class="text-base font-display font-bold text-white flex items-center gap-2">
+            <i data-lucide="calendar-plus" class="w-5 h-5 text-revive-emerald"></i> 거래처 일정 등록 / 수정
+          </h3>
+          <p class="text-xs text-slate-300 font-mono">방문, 원장 미팅, MEX 교육, 시술 데모</p>
+        </div>
+        <button id="close-cal-event-btn" class="text-slate-400 hover:text-white p-1 rounded-lg">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <form id="calendar-event-form" class="space-y-3.5 text-xs">
+        <input type="hidden" id="event-id">
+
+        <div>
+          <label class="block text-slate-300 font-mono font-bold mb-1">연계 거래처 선택 (ACCOUNT) *</label>
+          <select id="event-account-id" required class="w-full bg-cosmic-950 border border-cosmic-700 rounded-lg p-2.5 text-white focus:outline-none focus:border-revive-emerald">
+            <!-- Populated dynamically -->
+          </select>
+        </div>
+
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block text-slate-300 font-mono font-bold mb-1">일정 구분 *</label>
+            <select id="event-type" required class="w-full bg-cosmic-950 border border-cosmic-700 rounded-lg p-2.5 text-white font-mono focus:outline-none focus:border-revive-emerald">
+              <option value="MEETING">원장 미팅</option>
+              <option value="DEMO">핸즈온 데모 / 시술</option>
+              <option value="SEMINAR">MEX 세미나 / S_S</option>
+              <option value="VISIT">정기 라운딩 / 납품</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-slate-300 font-mono font-bold mb-1">담당자 (ATTENDEE) *</label>
+            <select id="event-attendee" required class="w-full bg-cosmic-950 border border-cosmic-700 rounded-lg p-2.5 text-white font-mono focus:outline-none focus:border-revive-emerald">
+              <option value="용우">용우 (TM)</option>
+              <option value="우진">우진 (TM)</option>
+              <option value="윤">윤 (RBS)</option>
+              <option value="ALL">전체 공동</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block text-slate-300 font-mono font-bold mb-1">날짜 (DATE) *</label>
+            <input type="date" id="event-date" required class="w-full bg-cosmic-950 border border-cosmic-700 rounded-lg p-2.5 text-white font-mono focus:outline-none focus:border-revive-emerald">
+          </div>
+          <div>
+            <label class="block text-slate-300 font-mono font-bold mb-1">시간 (TIME)</label>
+            <input type="time" id="event-time" value="14:00" class="w-full bg-cosmic-950 border border-cosmic-700 rounded-lg p-2.5 text-white font-mono focus:outline-none focus:border-revive-emerald">
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-slate-300 font-mono font-bold mb-1">일정 제목 / 주요 안건 *</label>
+          <input type="text" id="event-title" required placeholder="예: 원장님 CPM 공법 브리핑 및 MEX-PRO 시연 일정" class="w-full bg-cosmic-950 border border-cosmic-700 rounded-lg p-2.5 text-white focus:outline-none focus:border-revive-emerald">
+        </div>
+
+        <div>
+          <label class="block text-slate-300 font-mono font-bold mb-1">상세 메모</label>
+          <textarea id="event-notes" rows="2" placeholder="준비물: 쇼케이스 거치대, 리플렛 50부, 프로토콜 자료" class="w-full bg-cosmic-950 border border-cosmic-700 rounded-lg p-2.5 text-white focus:outline-none focus:border-revive-emerald"></textarea>
+        </div>
+
+        <div class="pt-3 flex justify-between items-center font-mono">
+          <button type="button" id="delete-cal-event-btn" class="text-red-400 hover:text-red-300 hidden">일정 삭제</button>
+          <div class="flex gap-2 ml-auto">
+            <button type="button" id="cancel-cal-event-btn" class="px-4 py-2 rounded-lg bg-cosmic-900 text-slate-300">취소</button>
+            <button type="submit" class="px-5 py-2 rounded-lg bg-revive-emerald text-black font-bold hover:bg-revive-mint">저장</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Cosmic Audio Synthesizer -->
+  <script>
+    class CosmicAudio {
+      constructor() {
+        this.ctx = null;
+      }
+      init() {
+        if (!this.ctx) {
+          const AudioContext = window.AudioContext || window.webkitAudioContext;
+          if (AudioContext) this.ctx = new AudioContext();
+        }
+      }
+      playWormhole() {
+        try {
+          this.init();
+          if (!this.ctx) return;
+          const osc = this.ctx.createOscillator();
+          const gain = this.ctx.createGain();
+          osc.type = 'sine';
+          osc.frequency.setValueAtTime(220, this.ctx.currentTime);
+          osc.frequency.exponentialRampToValueAtTime(880, this.ctx.currentTime + 0.6);
+          gain.gain.setValueAtTime(0.18, this.ctx.currentTime);
+          gain.gain.exponentialRampToValueAtTime(0.01, this.ctx.currentTime + 0.6);
+          osc.connect(gain);
+          gain.connect(this.ctx.destination);
+          osc.start();
+          osc.stop(this.ctx.currentTime + 0.6);
+        } catch (e) {}
+      }
+      playClick() {
+        try {
+          this.init();
+          if (!this.ctx) return;
+          const osc = this.ctx.createOscillator();
+          const gain = this.ctx.createGain();
+          osc.type = 'triangle';
+          osc.frequency.setValueAtTime(520, this.ctx.currentTime);
+          osc.frequency.exponentialRampToValueAtTime(1040, this.ctx.currentTime + 0.08);
+          gain.gain.setValueAtTime(0.09, this.ctx.currentTime);
+          gain.gain.exponentialRampToValueAtTime(0.01, this.ctx.currentTime + 0.08);
+          osc.connect(gain);
+          gain.connect(this.ctx.destination);
+          osc.start();
+          osc.stop(this.ctx.currentTime + 0.08);
+        } catch (e) {}
+      }
+    }
+    const audio = new CosmicAudio();
+  </script>
+
+  <!-- Interactive Cosmic Canvas -->
+  <script>
+    const canvas = document.getElementById('cosmic-canvas');
+    const ctx = canvas.getContext('2d');
+    let width, height;
+    let particles = [];
+    const PARTICLE_COUNT = 75;
+
+    function resizeCanvas() {
+      width = canvas.width = window.innerWidth;
+      height = canvas.height = window.innerHeight;
+    }
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+
+    class Particle {
+      constructor() {
+        this.reset();
+      }
+      reset() {
+        this.x = Math.random() * width;
+        this.y = Math.random() * height;
+        this.size = Math.random() * 2 + 0.5;
+        this.speedX = (Math.random() - 0.5) * 0.35;
+        this.speedY = (Math.random() - 0.5) * 0.35;
+        this.alpha = Math.random() * 0.7 + 0.3;
+        this.hue = Math.random() > 0.4 ? 165 : 195;
+      }
+      update() {
+        this.x += this.speedX;
+        this.y += this.speedY;
+        if (this.x < 0 || this.x > width || this.y < 0 || this.y > height) {
+          this.reset();
+        }
+      }
+      draw() {
+        ctx.save();
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fillStyle = `hsla(${this.hue}, 100%, 70%, ${this.alpha})`;
+        ctx.shadowBlur = 6;
+        ctx.shadowColor = `hsl(${this.hue}, 100%, 70%)`;
+        ctx.fill();
+        ctx.restore();
+      }
+    }
+
+    for (let i = 0; i < PARTICLE_COUNT; i++) {
+      particles.push(new Particle());
+    }
+
+    function animateParticles() {
+      ctx.clearRect(0, 0, width, height);
+      for (let i = 0; i < particles.length; i++) {
+        for (let j = i + 1; j < particles.length; j++) {
+          const dx = particles[i].x - particles[j].x;
+          const dy = particles[i].y - particles[j].y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < 110) {
+            ctx.save();
+            ctx.beginPath();
+            ctx.moveTo(particles[i].x, particles[i].y);
+            ctx.lineTo(particles[j].x, particles[j].y);
+            ctx.strokeStyle = `rgba(0, 242, 178, ${0.12 * (1 - dist / 110)})`;
+            ctx.lineWidth = 0.8;
+            ctx.stroke();
+            ctx.restore();
+          }
+        }
+      }
+
+      particles.forEach(p => {
+        p.update();
+        p.draw();
+      });
+
+      requestAnimationFrame(animateParticles);
+    }
+    animateParticles();
+  </script>
+
+  <!-- Application Logic -->
+  <script>
+    // 10 RBS Master Metrics (Total weight = 100%)
+    const DEFAULT_KPIS = [
+      { id: 'kpi_1', name: '신규 랜딩 거래처 달성 (목표: 40처)', weight: 20, target: 40, current: 28, unit: '처' },
+      { id: 'kpi_2', name: '재발주 활성 거래처 (목표: 25처)', weight: 10, target: 25, current: 17, unit: '처' },
+      { id: 'kpi_3', name: '분기 누적 매출액 (목표: 6,500만원)', weight: 10, target: 6500, current: 4900, unit: '만원' },
+      { id: 'kpi_4', name: '제오민 연계 성장률 (>25% 달성)', weight: 5, target: 25, current: 22, unit: '%' },
+      { id: 'kpi_5', name: '원내 세일즈 세미나 진행 (목표: 5회)', weight: 5, target: 5, current: 4, unit: '회' },
+      { id: 'kpi_6', name: 'MEX 테일러드 프로그램 안착 (목표: 10회)', weight: 10, target: 10, current: 7, unit: '건' },
+      { id: 'kpi_7', name: 'MEX Pro 활성화 (목표: 40회)', weight: 10, target: 40, current: 31, unit: '회' },
+      { id: 'kpi_8', name: 'MEX Talk 시리즈 집행 (목표: 40회)', weight: 5, target: 40, current: 28, unit: '회' },
+      { id: 'kpi_9', name: '월별 표준 평가 (>90점 획득)', weight: 5, target: 90, current: 88, unit: '점' },
+      { id: 'kpi_10', name: '베스트 프랙티스 임상 공유 (목표: 5건)', weight: 20, target: 5, current: 4, unit: '건' }
+    ];
+
+    const INITIAL_ACCOUNTS = [
+      {
+        id: 'acc_1',
+        name: '강남 아이디에스테틱 의원',
+        segment: 'SA',
+        doctor: '정원장',
+        status: 'ONBOARDING',
+        assignee: '용우',
+        activities: {
+          mexPro: { active: true, count: 2 },
+          tailored: { active: true, count: 1 },
+          mexTalk: { active: false, count: 0 },
+          ss: { active: true, count: 1 }
+        },
+        notes: 'MEX-PRO 2회차 원내 핸즈온 피드백 우수.',
+        memberNotes: {
+          LEADER: '1분기 내 핵심 레퍼런스 처로 안착 지원 요망.',
+          용우: '전용 쇼케이스 POP 배치 완료. 다음주 재발주 수량 체크.',
+          우진: '',
+          윤: 'MEX-PRO 2회차 원내 핸즈온 피드백 우수.'
+        },
+        updatedAt: new Date().toISOString()
+      },
+      {
+        id: 'acc_2',
+        name: '청담 바노바기 프리미엄 클리닉',
+        segment: 'LA',
+        doctor: '반대표원장',
+        status: 'SAMPLING',
+        assignee: '우진',
+        activities: {
+          mexPro: { active: true, count: 4 },
+          tailored: { active: true, count: 2 },
+          mexTalk: { active: true, count: 1 },
+          ss: { active: false, count: 0 }
+        },
+        notes: 'MEX-TAILORED 커스텀 학술 자료 제공 완료.',
+        memberNotes: {
+          LEADER: 'KOL 자문단 위촉 연계 검토.',
+          용우: '',
+          우진: '샘플링 테스트 완료 후 연간 계약서 초안 전달 예정.',
+          윤: 'MEX-TAILORED 커스텀 학술 자료 제공 완료.'
+        },
+        updatedAt: new Date().toISOString()
+      },
+      {
+        id: 'acc_3',
+        name: '오라클 서초 메디컬 센터',
+        segment: 'SC',
+        doctor: '이원장',
+        status: 'PITCHING',
+        assignee: '용우',
+        activities: {
+          mexPro: { active: false, count: 0 },
+          tailored: { active: true, count: 1 },
+          mexTalk: { active: false, count: 0 },
+          ss: { active: true, count: 1 }
+        },
+        notes: '상담실장 대상 S_S 세미나 1회 진행 완료.',
+        memberNotes: {
+          LEADER: '단기 볼륨 확대 타깃으로 집중 관리.',
+          용우: '수분-탄력 매트릭스 관심 높음. 샘플 키트 발송 완료.',
+          우진: '',
+          윤: '상담실장 대상 S_S 세미나 1회 진행 완료.'
+        },
+        updatedAt: new Date().toISOString()
+      },
+      {
+        id: 'acc_4',
+        name: '압구정 리쥬브네이션 네트워크',
+        segment: 'LC',
+        doctor: '최총괄원장',
+        status: 'CONTACT',
+        assignee: '우진',
+        activities: {
+          mexPro: { active: false, count: 0 },
+          tailored: { active: false, count: 0 },
+          mexTalk: { active: true, count: 2 },
+          ss: { active: false, count: 0 }
+        },
+        notes: 'MEX-TALK 시리즈로 원장단 초기 관심 유도 중.',
+        memberNotes: {
+          LEADER: '제오민 패키지 조건과 함께 제안할 것.',
+          용우: '',
+          우진: '타사 스킨부스터 전환 타깃. CPM 특허 브리핑 전달.',
+          윤: 'MEX-TALK 시리즈로 원장단 초기 관심 유도 중.'
+        },
+        updatedAt: new Date().toISOString()
+      },
+      {
+        id: 'acc_5',
+        name: '목동 샤인힐즈 피부과의원',
+        segment: 'SA',
+        doctor: '박원장',
+        status: 'COMPLETE',
+        assignee: '우진',
+        activities: {
+          mexPro: { active: true, count: 3 },
+          tailored: { active: true, count: 2 },
+          mexTalk: { active: true, count: 2 },
+          ss: { active: true, count: 2 }
+        },
+        notes: '4대 MEX 프로그램 전 과정 수료 완료.',
+        memberNotes: {
+          LEADER: '완결 축하! Best Practice 사례로 공유 예정.',
+          용우: '',
+          우진: '연간 공급 계약 및 초도 물량 입고 완결.',
+          윤: '4대 MEX 프로그램 전 과정 수료 완료.'
+        },
+        updatedAt: new Date().toISOString()
+      }
+    ];
+
+    const INITIAL_EVENTS = [
+      {
+        id: 'ev_1',
+        accountId: 'acc_1',
+        accountName: '강남 아이디에스테틱 의원',
+        type: 'DEMO',
+        attendee: '용우',
+        date: new Date().toISOString().slice(0, 10),
+        time: '14:30',
+        title: 'Belotero Revive 원내 핸즈온 데모 시술',
+        notes: '신규 전담 간호팀 프로토콜 시연'
+      },
+      {
+        id: 'ev_2',
+        accountId: 'acc_2',
+        accountName: '청담 바노바기 프리미엄 클리닉',
+        type: 'SEMINAR',
+        attendee: '윤',
+        date: new Date(Date.now() + 86400000 * 2).toISOString().slice(0, 10),
+        time: '18:30',
+        title: 'MEX-PRO & CPM 매트릭스 원내 심포지엄',
+        notes: '원장단 4인 참석 예정'
+      }
+    ];
+
+    const AppState = {
+      kpis: [],
+      accounts: [],
+      events: [],
+      currentView: 'orbit',
+      matrixMember: 'LEADER',
+      selectedCalDate: new Date().toISOString().slice(0, 10),
+      calCurrentYear: new Date().getFullYear(),
+      calCurrentMonth: new Date().getMonth(),
+      activeDrawerSegment: null
+    };
+
+    function loadStorage() {
+      try {
+        const savedKpis = localStorage.getItem('REVIVE_KPIS_V4');
+        const savedAccounts = localStorage.getItem('REVIVE_ACCOUNTS_V4');
+        const savedEvents = localStorage.getItem('REVIVE_EVENTS_V4');
+        AppState.kpis = savedKpis ? JSON.parse(savedKpis) : JSON.parse(JSON.stringify(DEFAULT_KPIS));
+        AppState.accounts = savedAccounts ? JSON.parse(savedAccounts) : JSON.parse(JSON.stringify(INITIAL_ACCOUNTS));
+        AppState.events = savedEvents ? JSON.parse(savedEvents) : JSON.parse(JSON.stringify(INITIAL_EVENTS));
+      } catch (e) {
+        AppState.kpis = JSON.parse(JSON.stringify(DEFAULT_KPIS));
+        AppState.accounts = JSON.parse(JSON.stringify(INITIAL_ACCOUNTS));
+        AppState.events = JSON.parse(JSON.stringify(INITIAL_EVENTS));
+      }
+      
+      AppState.accounts.forEach(acc => {
+        if (acc.assignee !== '용우' && acc.assignee !== '우진') {
+          acc.assignee = '용우';
+        }
+        if (acc.status === 'MEETING') acc.status = 'PITCHING';
+        if (acc.status === 'HANDSON') acc.status = 'SAMPLING';
+        if (acc.status === 'CONTRACT') acc.status = 'ONBOARDING';
+
+        if (!acc.activities) {
+          acc.activities = {
+            mexPro: { active: false, count: 0 },
+            tailored: { active: false, count: 0 },
+            mexTalk: { active: false, count: 0 },
+            ss: { active: false, count: 0 }
+          };
+        }
+        if (!acc.memberNotes) {
+          acc.memberNotes = {
+            LEADER: acc.notes || '',
+            용우: acc.assignee === '용우' ? (acc.notes || '') : '',
+            우진: acc.assignee === '우진' ? (acc.notes || '') : '',
+            윤: acc.notes || ''
+          };
+        }
+      });
+    }
+
+    function saveStorage() {
+      try {
+        localStorage.setItem('REVIVE_KPIS_V4', JSON.stringify(AppState.kpis));
+        localStorage.setItem('REVIVE_ACCOUNTS_V4', JSON.stringify(AppState.accounts));
+        localStorage.setItem('REVIVE_EVENTS_V4', JSON.stringify(AppState.events));
+      } catch (e) {}
+    }
+
+    // High-Precision D-Day Counter (Target: 2027-06-30 23:59:59 KST)
+    const TARGET_DATE = new Date('2027-06-30T23:59:59+09:00').getTime();
+
+    function updateDDayTimer() {
+      const now = new Date().getTime();
+      const diff = TARGET_DATE - now;
+
+      if (diff <= 0) {
+        document.getElementById('flip-d').textContent = '000';
+        document.getElementById('flip-h').textContent = '00';
+        document.getElementById('flip-m').textContent = '00';
+        document.getElementById('flip-s').textContent = '00';
+        return;
+      }
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+      document.getElementById('flip-d').textContent = String(days).padStart(3, '0');
+      document.getElementById('flip-h').textContent = String(hours).padStart(2, '0');
+      document.getElementById('flip-m').textContent = String(minutes).padStart(2, '0');
+      document.getElementById('flip-s').textContent = String(seconds).padStart(2, '0');
+    }
+    setInterval(updateDDayTimer, 1000);
+    updateDDayTimer();
+
+    // RBS KPI Engine
+    function calculateMasterKPI() {
+      let composite = 0;
+      AppState.kpis.forEach(kpi => {
+        const achievement = Math.min(100, (kpi.current / kpi.target) * 100);
+        composite += achievement * (kpi.weight / 100);
+      });
+      return Math.round(composite * 10) / 10;
+    }
+
+    function updateKPIDisplay() {
+      const score = calculateMasterKPI();
+      const ring = document.getElementById('kpi-ring-progress');
+      const text = document.getElementById('kpi-ring-text');
+      const modalScore = document.getElementById('modal-composite-score');
+      const modalBar = document.getElementById('modal-composite-bar');
+
+      ring.setAttribute('stroke-dasharray', `${score}, 100`);
+      text.textContent = `${score.toFixed(1)}%`;
+      modalScore.textContent = `${score.toFixed(1)}%`;
+      modalBar.style.width = `${Math.min(100, score)}%`;
+    }
+
+    function openKPIModal() {
+      const kpiModal = document.getElementById('kpi-modal');
+      kpiModal.classList.remove('hidden');
+      renderKPISliders();
+      audio.playClick();
+    }
+
+    function renderKPISliders() {
+      const container = document.getElementById('kpi-sliders-container');
+      container.innerHTML = AppState.kpis.map((kpi, idx) => {
+        const rate = Math.min(100, Math.round((kpi.current / kpi.target) * 100));
+        return `
+          <div class="bg-cosmic-950 p-3.5 sm:p-4 rounded-xl border border-cosmic-800 space-y-2">
+            <div class="flex flex-wrap justify-between items-center text-xs gap-1">
+              <span class="font-bold text-white font-mono">${idx + 1}. ${kpi.name}</span>
+              <div class="flex items-center gap-2">
+                <span class="font-mono text-[11px] px-2 py-0.5 rounded bg-cosmic-900 text-revive-mint border border-cosmic-700">가중치 ${kpi.weight}%</span>
+                <span class="font-mono font-bold text-revive-emerald text-sm">${rate}% 달성</span>
+              </div>
+            </div>
+            <div class="flex items-center gap-3 sm:gap-4">
+              <input type="range" min="0" max="${kpi.target * 1.5}" value="${kpi.current}" 
+                class="flex-1 kpi-slider-input" data-index="${idx}">
+              <div class="flex items-center gap-1 font-mono text-xs w-32 sm:w-36 justify-end">
+                <input type="number" min="0" value="${kpi.current}" 
+                  class="w-16 sm:w-20 bg-cosmic-900 border border-cosmic-700 rounded px-2 py-1 text-right text-white focus:outline-none focus:border-revive-emerald kpi-number-input font-bold" data-index="${idx}">
+                <span class="text-slate-400">/${kpi.target} ${kpi.unit}</span>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      container.querySelectorAll('.kpi-slider-input').forEach(input => {
+        input.addEventListener('input', (e) => {
+          const idx = e.target.dataset.index;
+          AppState.kpis[idx].current = parseFloat(e.target.value) || 0;
+          container.querySelectorAll('.kpi-number-input')[idx].value = AppState.kpis[idx].current;
+          updateKPIDisplay();
+        });
+      });
+
+      container.querySelectorAll('.kpi-number-input').forEach(input => {
+        input.addEventListener('input', (e) => {
+          const idx = e.target.dataset.index;
+          AppState.kpis[idx].current = parseFloat(e.target.value) || 0;
+          container.querySelectorAll('.kpi-slider-input')[idx].value = AppState.kpis[idx].current;
+          updateKPIDisplay();
+        });
+      });
+    }
+
+    function updateCounts() {
+      const activeAccounts = AppState.accounts.filter(a => a.status !== 'COMPLETE');
+      const completedAccounts = AppState.accounts.filter(a => a.status === 'COMPLETE');
+
+      const countSA = activeAccounts.filter(a => a.segment === 'SA').length;
+      const countSC = activeAccounts.filter(a => a.segment === 'SC').length;
+      const countLA = activeAccounts.filter(a => a.segment === 'LA').length;
+      const countLC = activeAccounts.filter(a => a.segment === 'LC').length;
+
+      document.getElementById('count-SA').textContent = `${countSA} ACCS`;
+      document.getElementById('count-SC').textContent = `${countSC} ACCS`;
+      document.getElementById('count-LA').textContent = `${countLA} ACCS`;
+      document.getElementById('count-LC').textContent = `${countLC} ACCS`;
+
+      document.getElementById('center-total-accounts').textContent = activeAccounts.length;
+      document.getElementById('wormhole-count').textContent = completedAccounts.length;
+      document.getElementById('wormhole-total-sub').textContent = completedAccounts.length;
+    }
+
+    function renderActivitiesBadge(act = {}) {
+      const badges = [];
+      if (act.mexPro && act.mexPro.active) {
+        badges.push(`<span class="px-1.5 py-0.5 rounded bg-revive-emerald/20 text-revive-emerald border border-revive-emerald/40 font-mono text-[10px]">PRO ${act.mexPro.count}회</span>`);
+      }
+      if (act.tailored && act.tailored.active) {
+        badges.push(`<span class="px-1.5 py-0.5 rounded bg-teal-500/20 text-teal-300 border border-teal-500/40 font-mono text-[10px]">TLRD ${act.tailored.count}회</span>`);
+      }
+      if (act.mexTalk && act.mexTalk.active) {
+        badges.push(`<span class="px-1.5 py-0.5 rounded bg-cyan-500/20 text-cyan-300 border border-cyan-500/40 font-mono text-[10px]">TALK ${act.mexTalk.count}회</span>`);
+      }
+      if (act.ss && act.ss.active) {
+        badges.push(`<span class="px-1.5 py-0.5 rounded bg-purple-500/20 text-purple-300 border border-purple-500/40 font-mono text-[10px]">S_S ${act.ss.count}회</span>`);
+      }
+
+      if (badges.length === 0) {
+        return '<span class="text-slate-500 text-[11px] font-mono">미진행</span>';
+      }
+      return `<div class="flex flex-wrap gap-1">${badges.join('')}</div>`;
+    }
+
+    // 4-Member Matrix Filtering with Yoon (RBS) All-Account Rule
+    function renderMatrixTable() {
+      const tbody = document.getElementById('matrix-table-body');
+      const emptyState = document.getElementById('matrix-empty');
+      const filteredCountEl = document.getElementById('matrix-filtered-count');
+      const noteHeaderEl = document.getElementById('matrix-note-header');
+
+      const searchQuery = document.getElementById('matrix-search').value.toLowerCase().trim();
+      const segFilter = document.getElementById('matrix-filter-segment').value;
+      const ownerFilter = document.getElementById('matrix-filter-owner').value;
+      const statusFilter = document.getElementById('matrix-filter-status').value;
+      const memberTab = AppState.matrixMember;
+
+      const headerLabels = {
+        LEADER: '👑 LEADER 메모 & 액션 플랜',
+        용우: '용우 (TM) 개인 메모 & 액션 플랜',
+        우진: '우진 (TM) 개인 메모 & 액션 플랜',
+        윤: '윤 (RBS) 부스팅 메모 & 액션 플랜'
+      };
+      if (noteHeaderEl) {
+        noteHeaderEl.textContent = headerLabels[memberTab] || '인라인 메모 & 액션 플랜';
+      }
+
+      let filtered = AppState.accounts.filter(acc => {
+        let matchMember = true;
+        if (memberTab === '용우') matchMember = (acc.assignee === '용우');
+        else if (memberTab === '우진') matchMember = (acc.assignee === '우진');
+
+        const matchOwner = ownerFilter === 'ALL' || acc.assignee === ownerFilter;
+        const matchSeg = segFilter === 'ALL' || acc.segment === segFilter;
+        const matchStatus = statusFilter === 'ALL' || acc.status === statusFilter;
+
+        const memberNoteText = (acc.memberNotes && acc.memberNotes[memberTab]) ? acc.memberNotes[memberTab] : (acc.notes || '');
+        const matchSearch = acc.name.toLowerCase().includes(searchQuery) ||
+                            (acc.doctor && acc.doctor.toLowerCase().includes(searchQuery)) ||
+                            memberNoteText.toLowerCase().includes(searchQuery);
+
+        return matchMember && matchOwner && matchSeg && matchStatus && matchSearch;
+      });
+
+      filteredCountEl.textContent = filtered.length;
+
+      if (filtered.length === 0) {
+        tbody.innerHTML = '';
+        emptyState.classList.remove('hidden');
+        return;
+      }
+      emptyState.classList.add('hidden');
+
+      tbody.innerHTML = filtered.map(acc => {
+        const isComplete = acc.status === 'COMPLETE';
+        const currentNoteValue = (acc.memberNotes && acc.memberNotes[memberTab] !== undefined)
+          ? acc.memberNotes[memberTab]
+          : (acc.notes || '');
+
+        const segmentBadge = {
+          SA: '<span class="px-2 py-0.5 rounded bg-revive-emerald/20 text-revive-emerald border border-revive-emerald/50 font-mono font-bold" title="SHORT-TERM / ACADEMIC">S/A</span>',
+          SC: '<span class="px-2 py-0.5 rounded bg-teal-500/20 text-teal-300 border border-teal-500/50 font-mono font-bold" title="SHORT-TERM / COMMERCIAL">S/C</span>',
+          LA: '<span class="px-2 py-0.5 rounded bg-cyan-500/20 text-cyan-300 border border-cyan-500/50 font-mono font-bold" title="LONG-TERM / ACADEMIC">L/A</span>',
+          LC: '<span class="px-2 py-0.5 rounded bg-indigo-500/20 text-indigo-300 border border-indigo-500/50 font-mono font-bold" title="LONG-TERM / COMMERCIAL">L/C</span>'
+        }[acc.segment];
+
+        return `
+          <tr class="hover:bg-cosmic-900 transition group border-b border-cosmic-800 ${isComplete ? 'bg-amber-950/20' : ''}">
+            <td class="p-3.5 cursor-pointer matrix-row-click" data-id="${acc.id}">
+              <div class="font-bold text-white flex items-center gap-2 group-hover:text-revive-emerald transition">
+                <i data-lucide="building" class="w-4 h-4 text-revive-emerald"></i>
+                ${acc.name}
+                ${isComplete ? '<span class="px-1.5 py-0.2 rounded bg-yellow-400 text-black font-mono text-[10px] font-bold">WORMHOLE</span>' : ''}
+              </div>
+            </td>
+            <td class="p-3.5 font-mono">${segmentBadge}</td>
+            <td class="p-3.5 text-slate-200 font-medium">${acc.doctor || '-'}</td>
+            <td class="p-3.5">
+              <span class="px-2.5 py-1 rounded-lg bg-cosmic-950 border border-cosmic-800 text-revive-emerald font-mono text-xs font-bold">
+                ${acc.assignee} (TM)
+              </span>
+            </td>
+            <td class="p-3.5">
+              ${renderActivitiesBadge(acc.activities)}
+            </td>
+            <td class="p-3.5">
+              <select class="matrix-status-select bg-cosmic-950 border border-cosmic-700 focus:border-revive-emerald rounded-lg px-2.5 py-1 text-xs text-white font-mono focus:outline-none" data-id="${acc.id}">
+                <option value="CONTACT" ${acc.status === 'CONTACT' ? 'selected' : ''}>1. 접촉 (CONTACT)</option>
+                <option value="PITCHING" ${acc.status === 'PITCHING' ? 'selected' : ''}>2. 피칭 (PITCHING)</option>
+                <option value="SAMPLING" ${acc.status === 'SAMPLING' ? 'selected' : ''}>3. 샘플링 (SAMPLING)</option>
+                <option value="ONBOARDING" ${acc.status === 'ONBOARDING' ? 'selected' : ''}>4. 온보딩 (ONBOARDING)</option>
+                <option value="COMPLETE" ${acc.status === 'COMPLETE' ? 'selected' : ''}>⭐ 완결 (COMPLETE)</option>
+              </select>
+            </td>
+            <td class="p-3.5">
+              <input type="text" value="${currentNoteValue}" placeholder="${memberTab === 'LEADER' ? '👑 LEADER 메모 입력...' : memberTab + ' 메모 입력...'}" 
+                class="matrix-note-input w-full bg-cosmic-950/70 border border-cosmic-800 focus:border-revive-emerald rounded px-2.5 py-1 text-xs text-white placeholder-slate-500 focus:outline-none transition" data-id="${acc.id}">
+            </td>
+            <td class="p-3.5 text-center">
+              <div class="flex items-center justify-center gap-1.5">
+                <button class="edit-acc-btn p-1.5 text-slate-300 hover:text-revive-emerald hover:bg-cosmic-800 rounded-lg transition" data-id="${acc.id}" title="ACCOUNT DETAIL 열기">
+                  <i data-lucide="file-edit" class="w-4 h-4"></i>
+                </button>
+                <button class="delete-acc-btn p-1.5 text-slate-400 hover:text-red-400 hover:bg-cosmic-800 rounded-lg transition" data-id="${acc.id}" title="거래처 삭제">
+                  <i data-lucide="trash-2" class="w-4 h-4"></i>
+                </button>
+              </div>
+            </td>
+          </tr>
+        `;
+      }).join('');
+
+      lucide.createIcons();
+
+      tbody.querySelectorAll('.matrix-row-click').forEach(elem => {
+        elem.addEventListener('click', () => {
+          openAccountFormModal(elem.dataset.id);
+        });
+      });
+
+      tbody.querySelectorAll('.matrix-status-select').forEach(select => {
+        select.addEventListener('change', (e) => {
+          const id = e.target.dataset.id;
+          const newStatus = e.target.value;
+          const targetAcc = AppState.accounts.find(a => a.id === id);
+          if (targetAcc) {
+            targetAcc.status = newStatus;
+            targetAcc.updatedAt = new Date().toISOString();
+            if (newStatus === 'COMPLETE') {
+              audio.playWormhole();
+            } else {
+              audio.playClick();
+            }
+            saveStorage();
+            updateCounts();
+            renderMatrixTable();
+          }
+        });
+      });
+
+      tbody.querySelectorAll('.matrix-note-input').forEach(input => {
+        input.addEventListener('change', (e) => {
+          const id = e.target.dataset.id;
+          const targetAcc = AppState.accounts.find(a => a.id === id);
+          if (targetAcc) {
+            if (!targetAcc.memberNotes) targetAcc.memberNotes = {};
+            targetAcc.memberNotes[AppState.matrixMember] = e.target.value;
+            if (AppState.matrixMember === '윤') {
+              targetAcc.notes = e.target.value;
+            }
+            targetAcc.updatedAt = new Date().toISOString();
+            saveStorage();
+          }
+        });
+      });
+
+      tbody.querySelectorAll('.edit-acc-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          openAccountFormModal(btn.dataset.id);
+        });
+      });
+
+      tbody.querySelectorAll('.delete-acc-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          deleteAccount(btn.dataset.id);
+        });
+      });
+    }
+
+    function resetAllMatrixFilters() {
+      document.getElementById('matrix-search').value = '';
+      document.getElementById('matrix-filter-segment').value = 'ALL';
+      document.getElementById('matrix-filter-owner').value = 'ALL';
+      document.getElementById('matrix-filter-status').value = 'ALL';
+      renderMatrixTable();
+      audio.playClick();
+    }
+
+    // Slide-over Drawer for TYPE
+    function openSegmentDrawer(segmentKey) {
+      AppState.activeDrawerSegment = segmentKey;
+      const drawer = document.getElementById('account-drawer');
+      const backdrop = document.getElementById('drawer-backdrop');
+
+      const headers = {
+        SA: { title: 'TYPE // S/A DIRECTORY', sub: 'SHORT-TERM / ACADEMIC' },
+        SC: { title: 'TYPE // S/C DIRECTORY', sub: 'SHORT-TERM / COMMERCIAL' },
+        LA: { title: 'TYPE // L/A DIRECTORY', sub: 'LONG-TERM / ACADEMIC' },
+        LC: { title: 'TYPE // L/C DIRECTORY', sub: 'LONG-TERM / COMMERCIAL' }
+      }[segmentKey];
+
+      document.getElementById('drawer-title').textContent = headers.title;
+      document.getElementById('drawer-subtitle').textContent = headers.sub;
+
+      renderDrawerList();
+
+      backdrop.classList.remove('hidden');
+      drawer.classList.remove('translate-x-full');
+      audio.playClick();
+    }
+
+    function closeSegmentDrawer() {
+      const drawer = document.getElementById('account-drawer');
+      const backdrop = document.getElementById('drawer-backdrop');
+      drawer.classList.add('translate-x-full');
+      backdrop.classList.add('hidden');
+      AppState.activeDrawerSegment = null;
+    }
+
+    function renderDrawerList() {
+      const container = document.getElementById('drawer-accounts-list');
+      const searchQuery = document.getElementById('drawer-search').value.toLowerCase().trim();
+      const segmentKey = AppState.activeDrawerSegment;
+
+      const filtered = AppState.accounts.filter(a => {
+        const matchSeg = a.segment === segmentKey;
+        const notComplete = a.status !== 'COMPLETE';
+        const matchSearch = a.name.toLowerCase().includes(searchQuery) || (a.doctor && a.doctor.toLowerCase().includes(searchQuery));
+        return matchSeg && notComplete && matchSearch;
+      });
+
+      if (filtered.length === 0) {
+        container.innerHTML = `
+          <div class="text-center py-16 text-slate-400 font-mono">
+            <i data-lucide="target" class="w-10 h-10 mx-auto text-slate-600 mb-2"></i>
+            <p class="text-xs">현재 TYPE에 등록된 진행 거래처가 없습니다.</p>
+            <p class="text-[11px] text-slate-500 mt-1">'거래처 등록' 버튼으로 새 거래처를 추가하세요.</p>
+          </div>
+        `;
+        lucide.createIcons();
+        return;
+      }
+
+      container.innerHTML = filtered.map(acc => {
+        const yoonNote = (acc.memberNotes && acc.memberNotes.윤) ? acc.memberNotes.윤.trim() : '';
+        const notePreview = yoonNote || '작성된 윤 (RBS) 메모가 없습니다. 클릭하여 추가하세요.';
+        return `
+          <div class="drawer-clinic-card command-panel p-4 rounded-xl space-y-2.5 cursor-pointer hover:border-revive-emerald hover:bg-cosmic-900/90 transition transform hover:-translate-y-0.5" data-id="${acc.id}" title="클릭하여 ACCOUNT DETAIL 열기">
+            <div class="flex items-start justify-between">
+              <div>
+                <div class="flex items-center gap-2">
+                  <span class="p-1.5 rounded-lg bg-revive-emerald/20 text-revive-emerald">
+                    <i data-lucide="building-2" class="w-4 h-4"></i>
+                  </span>
+                  <span class="text-sm font-bold text-white">${acc.name}</span>
+                </div>
+                <div class="text-xs text-slate-400 mt-1">원장/키맨: ${acc.doctor || '미등록'}</div>
+              </div>
+              <div class="text-right">
+                <span class="text-xs font-mono font-bold text-revive-emerald block">TM OWNER: ${acc.assignee} (TM)</span>
+                <span class="text-[10px] text-slate-400 font-mono">ACCOUNT DETAIL ➔</span>
+              </div>
+            </div>
+
+            <div class="py-1">
+              ${renderActivitiesBadge(acc.activities)}
+            </div>
+
+            <div class="text-xs text-slate-200 bg-cosmic-950 p-2.5 rounded-lg border border-amber-500/30">
+              <span class="text-amber-300 font-mono text-[10px] block font-bold mb-0.5">윤 (RBS) NOTE:</span>
+              ${notePreview}
+            </div>
+
+            <div class="flex items-center justify-between pt-2 border-t border-cosmic-800 text-xs">
+              <div class="flex items-center gap-2" onclick="event.stopPropagation()">
+                <span class="text-[11px] font-mono text-slate-400">상태:</span>
+                <select class="drawer-status-select bg-cosmic-950 border border-cosmic-700 rounded px-2 py-0.5 text-xs text-white font-mono focus:outline-none" data-id="${acc.id}">
+                  <option value="CONTACT" ${acc.status === 'CONTACT' ? 'selected' : ''}>1. 접촉 (CONTACT)</option>
+                  <option value="PITCHING" ${acc.status === 'PITCHING' ? 'selected' : ''}>2. 피칭 (PITCHING)</option>
+                  <option value="SAMPLING" ${acc.status === 'SAMPLING' ? 'selected' : ''}>3. 샘플링 (SAMPLING)</option>
+                  <option value="ONBOARDING" ${acc.status === 'ONBOARDING' ? 'selected' : ''}>4. 온보딩 (ONBOARDING)</option>
+                  <option value="COMPLETE">⭐ 완결 (COMPLETE)</option>
+                </select>
+              </div>
+              <div class="flex items-center gap-1.5 font-mono" onclick="event.stopPropagation()">
+                <button class="drawer-del-btn px-2.5 py-1 rounded bg-cosmic-900 text-slate-400 hover:text-red-400" data-id="${acc.id}">삭제</button>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      lucide.createIcons();
+
+      container.querySelectorAll('.drawer-clinic-card').forEach(card => {
+        card.addEventListener('click', () => {
+          openAccountFormModal(card.dataset.id);
+        });
+      });
+
+      container.querySelectorAll('.drawer-status-select').forEach(select => {
+        select.addEventListener('change', (e) => {
+          e.stopPropagation();
+          const id = e.target.dataset.id;
+          const newStatus = e.target.value;
+          const targetAcc = AppState.accounts.find(a => a.id === id);
+          if (targetAcc) {
+            targetAcc.status = newStatus;
+            targetAcc.updatedAt = new Date().toISOString();
+            if (newStatus === 'COMPLETE') {
+              audio.playWormhole();
+            } else {
+              audio.playClick();
+            }
+            saveStorage();
+            updateCounts();
+            renderDrawerList();
+            renderMatrixTable();
+          }
+        });
+      });
+
+      container.querySelectorAll('.drawer-del-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          deleteAccount(btn.dataset.id);
+          renderDrawerList();
+        });
+      });
+    }
+
+    // Gold Wormhole Hub
+    function openWormholeModal() {
+      const modal = document.getElementById('wormhole-modal');
+      const container = document.getElementById('wormhole-list');
+      const completedAccounts = AppState.accounts.filter(a => a.status === 'COMPLETE');
+
+      if (completedAccounts.length === 0) {
+        container.innerHTML = `
+          <div class="text-center py-16 text-amber-200/70 font-mono">
+            <i data-lucide="sparkles" class="w-12 h-12 mx-auto text-amber-500 mb-3"></i>
+            <p class="text-sm font-bold">WORMHOLE 허브가 비어있습니다</p>
+            <p class="text-xs text-amber-400/70 mt-1">거래처 진행 상태를 '완결(COMPLETE)'로 변경하면 이곳으로 워프됩니다.</p>
+          </div>
+        `;
+      } else {
+        container.innerHTML = completedAccounts.map(acc => {
+          const yoonNote = (acc.memberNotes && acc.memberNotes.윤) ? acc.memberNotes.윤 : (acc.notes || '최종 온보딩 완료');
+          return `
+            <div class="bg-black/70 border border-amber-500/40 p-4 rounded-xl flex flex-col sm:flex-row sm:items-center justify-between gap-3 hover:border-amber-400 transition">
+              <div>
+                <div class="flex items-center gap-2">
+                  <span class="w-2.5 h-2.5 rounded-full bg-yellow-400 animate-ping"></span>
+                  <span class="font-bold text-yellow-300 text-sm font-display">${acc.name}</span>
+                  <span class="text-xs font-mono font-bold px-2 py-0.5 rounded bg-amber-500/20 text-yellow-200 border border-amber-500/40">TYPE ${acc.segment} 완결</span>
+                </div>
+                <div class="text-xs text-amber-200/80 mt-1">
+                  원장: ${acc.doctor || '미등록'} | TM OWNER: ${acc.assignee} (TM)
+                </div>
+                <div class="text-xs text-slate-300 mt-1 italic font-sans">윤 (RBS): "${yoonNote}"</div>
+              </div>
+              <div>
+                <button class="restore-acc-btn px-3 py-1.5 rounded-lg bg-amber-500/20 hover:bg-amber-500/40 text-amber-200 text-xs font-mono font-bold transition border border-amber-500/40 whitespace-nowrap" data-id="${acc.id}">
+                  온보딩 상태로 복구
+                </button>
+              </div>
+            </div>
+          `;
+        }).join('');
+
+        container.querySelectorAll('.restore-acc-btn').forEach(btn => {
+          btn.addEventListener('click', () => {
+            const acc = AppState.accounts.find(a => a.id === btn.dataset.id);
+            if (acc) {
+              acc.status = 'ONBOARDING';
+              acc.updatedAt = new Date().toISOString();
+              saveStorage();
+              updateCounts();
+              renderMatrixTable();
+              openWormholeModal();
+            }
+          });
+        });
+      }
+
+      lucide.createIcons();
+      modal.classList.remove('hidden');
+      audio.playWormhole();
+    }
+
+    // Modal state for 3-person memo & temporary events before/during save
+    let modalTmDraftNotes = { 용우: '', 우진: '' };
+    let modalPendingEvents = [];
+    let modalActiveAssignee = '용우';
+
+    function updateTmNoteLabel(assignee) {
+      const label = document.getElementById('form-tm-note-label');
+      const textarea = document.getElementById('form-note-tm');
+      if (label) {
+        label.textContent = `${assignee} (TM) 필드 메모`;
+      }
+      if (textarea) {
+        textarea.placeholder = `${assignee} TM 방문 기록 및 액션 플랜...`;
+      }
+    }
+
+    function renderAccountDetailEvents(accountId) {
+      const listEl = document.getElementById('account-detail-events-list');
+      if (!listEl) return;
+
+      const existingEvents = accountId ? AppState.events.filter(ev => ev.accountId === accountId) : [];
+      const combined = [...existingEvents, ...modalPendingEvents];
+
+      if (combined.length === 0) {
+        listEl.innerHTML = `<div class="text-[11px] font-mono text-slate-500 py-1.5 px-2 bg-cosmic-900/40 rounded border border-cosmic-800/60">등록된 일정이 없습니다. 아래에서 새 일정을 추가하면 캘린더와 즉시 연동됩니다.</div>`;
+        return;
+      }
+
+      listEl.innerHTML = combined.map(ev => {
+        const typeLabel = {
+          MEETING: '미팅',
+          DEMO: '데모/시술',
+          SEMINAR: 'MEX 세미나',
+          VISIT: '방문/라운딩'
+        }[ev.type] || ev.type;
+
+        return `
+          <div class="flex items-center justify-between bg-cosmic-900 px-3 py-1.5 rounded-lg border border-cosmic-800 text-xs">
+            <div class="flex items-center gap-2 truncate pr-2">
+              <span class="px-1.5 py-0.5 rounded bg-revive-cyan/20 text-revive-cyan font-mono text-[10px] font-bold">${ev.date} ${ev.time}</span>
+              <span class="px-1.5 py-0.5 rounded bg-cosmic-950 text-revive-mint font-mono text-[10px]">${typeLabel}</span>
+              <span class="text-white font-medium truncate">${ev.title}</span>
+              <span class="text-[10px] font-mono text-slate-400">(${ev.attendee})</span>
+            </div>
+            <button type="button" class="detail-del-ev-btn text-red-400 hover:text-red-300 font-mono text-[11px] flex-shrink-0" data-id="${ev.id}">삭제</button>
+          </div>
+        `;
+      }).join('');
+
+      listEl.querySelectorAll('.detail-del-ev-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const evId = btn.dataset.id;
+          const pendingIdx = modalPendingEvents.findIndex(e => e.id === evId);
+          if (pendingIdx !== -1) {
+            modalPendingEvents.splice(pendingIdx, 1);
+          } else {
+            AppState.events = AppState.events.filter(e => e.id !== evId);
+            saveStorage();
+            renderCalendar();
+          }
+          renderAccountDetailEvents(accountId);
+        });
+      });
+    }
+
+    // Account Form Modal (ACCOUNT DETAIL)
+    function openAccountFormModal(accountId = null) {
+      const modal = document.getElementById('account-form-modal');
+      const form = document.getElementById('clinic-form');
+      const title = document.getElementById('account-form-title');
+      const delBtn = document.getElementById('delete-account-modal-btn');
+
+      modalPendingEvents = [];
+      document.getElementById('detail-ev-date').value = AppState.selectedCalDate || new Date().toISOString().slice(0, 10);
+      document.getElementById('detail-ev-time').value = '14:00';
+      document.getElementById('detail-ev-type').value = 'MEETING';
+      document.getElementById('detail-ev-title').value = '';
+
+      if (accountId) {
+        const acc = AppState.accounts.find(a => a.id === accountId);
+        if (!acc) return;
+        title.innerHTML = '<i data-lucide="file-edit" class="w-5 h-5 text-revive-emerald"></i> ACCOUNT DETAIL';
+        document.getElementById('form-account-id').value = acc.id;
+        document.getElementById('form-segment').value = acc.segment;
+        document.getElementById('form-name').value = acc.name;
+        document.getElementById('form-doctor').value = acc.doctor || '';
+        const owner = (acc.assignee === '우진') ? '우진' : '용우';
+        document.getElementById('form-assignee').value = owner;
+        document.getElementById('form-status').value = acc.status;
+        document.getElementById('detail-ev-attendee').value = owner;
+
+        const mNotes = acc.memberNotes || {};
+        modalTmDraftNotes = {
+          용우: mNotes.용우 || (owner === '용우' ? (acc.notes || '') : ''),
+          우진: mNotes.우진 || (owner === '우진' ? (acc.notes || '') : '')
+        };
+        modalActiveAssignee = owner;
+
+        document.getElementById('form-note-leader').value = mNotes.LEADER || '';
+        document.getElementById('form-note-yoon').value = mNotes.윤 || '';
+        updateTmNoteLabel(owner);
+        document.getElementById('form-note-tm').value = modalTmDraftNotes[owner] || '';
+
+        const act = acc.activities || {};
+        document.getElementById('form-act-mexpro').checked = !!(act.mexPro && act.mexPro.active);
+        document.getElementById('form-act-mexpro-count').value = (act.mexPro && act.mexPro.count) || 0;
+
+        document.getElementById('form-act-tailored').checked = !!(act.tailored && act.tailored.active);
+        document.getElementById('form-act-tailored-count').value = (act.tailored && act.tailored.count) || 0;
+
+        document.getElementById('form-act-mextalk').checked = !!(act.mexTalk && act.mexTalk.active);
+        document.getElementById('form-act-mextalk-count').value = (act.mexTalk && act.mexTalk.count) || 0;
+
+        document.getElementById('form-act-ss').checked = !!(act.ss && act.ss.active);
+        document.getElementById('form-act-ss-count').value = (act.ss && act.ss.count) || 0;
+
+        renderAccountDetailEvents(acc.id);
+
+        delBtn.classList.remove('hidden');
+        delBtn.onclick = () => {
+          deleteAccount(acc.id);
+          if (AppState.activeDrawerSegment) renderDrawerList();
+          closeAccountFormModal();
+        };
+      } else {
+        title.innerHTML = '<i data-lucide="plus-circle" class="w-5 h-5 text-revive-emerald"></i> ACCOUNT DETAIL';
+        form.reset();
+        document.getElementById('form-account-id').value = '';
+        document.getElementById('form-assignee').value = '용우';
+        document.getElementById('detail-ev-attendee').value = '용우';
+        document.getElementById('detail-ev-date').value = AppState.selectedCalDate || new Date().toISOString().slice(0, 10);
+        document.getElementById('detail-ev-time').value = '14:00';
+        document.getElementById('form-act-mexpro-count').value = 0;
+        document.getElementById('form-act-tailored-count').value = 0;
+        document.getElementById('form-act-mextalk-count').value = 0;
+        document.getElementById('form-act-ss-count').value = 0;
+
+        modalTmDraftNotes = { 용우: '', 우진: '' };
+        modalActiveAssignee = '용우';
+        document.getElementById('form-note-leader').value = '';
+        document.getElementById('form-note-yoon').value = '';
+        updateTmNoteLabel('용우');
+        document.getElementById('form-note-tm').value = '';
+
+        if (AppState.activeDrawerSegment) {
+          document.getElementById('form-segment').value = AppState.activeDrawerSegment;
+        }
+        renderAccountDetailEvents(null);
+        delBtn.classList.add('hidden');
+      }
+
+      lucide.createIcons();
+      modal.classList.remove('hidden');
+    }
+
+    function closeAccountFormModal() {
+      document.getElementById('account-form-modal').classList.add('hidden');
+    }
+
+    function handleAccountFormSubmit(e) {
+      e.preventDefault();
+      const id = document.getElementById('form-account-id').value;
+      const segment = document.getElementById('form-segment').value;
+      const name = document.getElementById('form-name').value.trim();
+      const doctor = document.getElementById('form-doctor').value.trim();
+      const assignee = document.getElementById('form-assignee').value;
+      const status = document.getElementById('form-status').value;
+
+      if (!name) return;
+
+      const currentTmNote = document.getElementById('form-note-tm').value.trim();
+      modalTmDraftNotes[assignee] = currentTmNote;
+
+      const existingAcc = id ? AppState.accounts.find(a => a.id === id) : null;
+      const prevNotes = (existingAcc && existingAcc.memberNotes) ? existingAcc.memberNotes : {};
+
+      const memberNotes = {
+        LEADER: document.getElementById('form-note-leader').value.trim(),
+        윤: document.getElementById('form-note-yoon').value.trim(),
+        용우: assignee === '용우' ? currentTmNote : (modalTmDraftNotes.용우 || prevNotes.용우 || ''),
+        우진: assignee === '우진' ? currentTmNote : (modalTmDraftNotes.우진 || prevNotes.우진 || '')
+      };
+      const primaryNote = memberNotes.윤 || memberNotes[assignee] || memberNotes.LEADER || '';
+
+      const activities = {
+        mexPro: {
+          active: document.getElementById('form-act-mexpro').checked,
+          count: parseInt(document.getElementById('form-act-mexpro-count').value, 10) || 0
+        },
+        tailored: {
+          active: document.getElementById('form-act-tailored').checked,
+          count: parseInt(document.getElementById('form-act-tailored-count').value, 10) || 0
+        },
+        mexTalk: {
+          active: document.getElementById('form-act-mextalk').checked,
+          count: parseInt(document.getElementById('form-act-mextalk-count').value, 10) || 0
+        },
+        ss: {
+          active: document.getElementById('form-act-ss').checked,
+          count: parseInt(document.getElementById('form-act-ss-count').value, 10) || 0
+        }
+      };
+
+      let targetAccountId = id;
+
+      if (id) {
+        const acc = AppState.accounts.find(a => a.id === id);
+        if (acc) {
+          acc.segment = segment;
+          acc.name = name;
+          acc.doctor = doctor;
+          acc.assignee = assignee;
+          acc.status = status;
+          acc.notes = primaryNote;
+          acc.memberNotes = memberNotes;
+          acc.activities = activities;
+          acc.updatedAt = new Date().toISOString();
+        }
+        AppState.events.forEach(ev => {
+          if (ev.accountId === id) ev.accountName = name;
+        });
+      } else {
+        targetAccountId = 'acc_' + Date.now();
+        const newAcc = {
+          id: targetAccountId,
+          name,
+          segment,
+          doctor,
+          status,
+          assignee,
+          activities,
+          notes: primaryNote,
+          memberNotes,
+          updatedAt: new Date().toISOString()
+        };
+        AppState.accounts.unshift(newAcc);
+      }
+
+      const inlineEvTitle = document.getElementById('detail-ev-title').value.trim();
+      if (inlineEvTitle) {
+        modalPendingEvents.push({
+          id: 'ev_' + Date.now() + '_inline',
+          accountId: targetAccountId,
+          accountName: name,
+          type: document.getElementById('detail-ev-type').value,
+          attendee: document.getElementById('detail-ev-attendee').value,
+          date: document.getElementById('detail-ev-date').value || new Date().toISOString().slice(0, 10),
+          time: document.getElementById('detail-ev-time').value || '14:00',
+          title: inlineEvTitle,
+          notes: ''
+        });
+      }
+
+      if (modalPendingEvents.length > 0) {
+        modalPendingEvents.forEach(ev => {
+          ev.accountId = targetAccountId;
+          ev.accountName = name;
+          AppState.events.push(ev);
+        });
+        modalPendingEvents = [];
+      }
+
+      if (status === 'COMPLETE') {
+        audio.playWormhole();
+      } else {
+        audio.playClick();
+      }
+
+      saveStorage();
+      updateCounts();
+      renderMatrixTable();
+      renderCalendar();
+      if (AppState.activeDrawerSegment) {
+        renderDrawerList();
+      }
+      closeAccountFormModal();
+    }
+
+    function deleteAccount(id) {
+      const idx = AppState.accounts.findIndex(a => a.id === id);
+      if (idx !== -1) {
+        AppState.accounts.splice(idx, 1);
+        AppState.events = AppState.events.filter(ev => ev.accountId !== id);
+        saveStorage();
+        updateCounts();
+        renderMatrixTable();
+        renderCalendar();
+      }
+    }
+
+    // ==============================================================
+    // CALENDAR MODULE
+    // ==============================================================
+    function renderCalendar() {
+      const daysGrid = document.getElementById('calendar-days-grid');
+      const monthLabel = document.getElementById('cal-current-month');
+      
+      const year = AppState.calCurrentYear;
+      const month = AppState.calCurrentMonth;
+      monthLabel.textContent = `${year}. ${String(month + 1).padStart(2, '0')}`;
+
+      const firstDay = new Date(year, month, 1).getDay();
+      const totalDays = new Date(year, month + 1, 0).getDate();
+      const prevTotalDays = new Date(year, month, 0).getDate();
+
+      let html = '';
+
+      for (let i = firstDay - 1; i >= 0; i--) {
+        const d = prevTotalDays - i;
+        html += `<div class="p-1 min-h-[65px] sm:min-h-[75px] rounded-lg bg-cosmic-950/40 border border-cosmic-900/60 text-slate-600 font-mono text-[11px] select-none">${d}</div>`;
+      }
+
+      const todayStr = new Date().toISOString().slice(0, 10);
+      for (let d = 1; d <= totalDays; d++) {
+        const dateStr = `${year}-${String(month + 1).padStart(2, '0')}-${String(d).padStart(2, '0')}`;
+        const isToday = dateStr === todayStr;
+        const isSelected = dateStr === AppState.selectedCalDate;
+        const dayEvents = AppState.events.filter(ev => ev.date === dateStr);
+
+        html += `
+          <div class="cal-day-cell p-1 sm:p-1.5 min-h-[65px] sm:min-h-[75px] rounded-lg border cursor-pointer transition flex flex-col justify-between ${
+            isSelected ? 'bg-revive-emerald/15 border-revive-emerald ring-1 ring-revive-emerald' : 
+            isToday ? 'bg-cosmic-900 border-revive-mint/50' : 'bg-cosmic-950 border-cosmic-800 hover:border-slate-600'
+          }" data-date="${dateStr}">
+            <div class="flex justify-between items-center text-[11px] font-mono">
+              <span class="${isToday ? 'font-bold text-revive-emerald px-1 rounded bg-revive-emerald/20' : 'text-slate-300'}">${d}</span>
+              ${dayEvents.length > 0 ? `<span class="w-2 h-2 rounded-full bg-revive-cyan"></span>` : ''}
+            </div>
+            <div class="space-y-0.5 overflow-hidden">
+              ${dayEvents.slice(0, 2).map(ev => `
+                <div class="truncate text-[9px] px-1 py-0.5 rounded font-mono font-medium ${
+                  ev.type === 'DEMO' ? 'bg-cyan-500/20 text-cyan-300' :
+                  ev.type === 'SEMINAR' ? 'bg-purple-500/20 text-purple-300' :
+                  ev.type === 'MEETING' ? 'bg-emerald-500/20 text-emerald-300' : 'bg-amber-500/20 text-amber-300'
+                }" title="${ev.accountName} - ${ev.title}">
+                  ${ev.accountName}
+                </div>
+              `).join('')}
+              ${dayEvents.length > 2 ? `<div class="text-[8px] text-slate-400 font-mono">+${dayEvents.length - 2}건</div>` : ''}
+            </div>
+          </div>
+        `;
+      }
+
+      daysGrid.innerHTML = html;
+
+      daysGrid.querySelectorAll('.cal-day-cell').forEach(cell => {
+        cell.addEventListener('click', () => {
+          AppState.selectedCalDate = cell.dataset.date;
+          renderCalendar();
+          renderAgenda();
+          audio.playClick();
+        });
+      });
+
+      renderAgenda();
+    }
+
+    function renderAgenda() {
+      const container = document.getElementById('calendar-agenda-list');
+      const label = document.getElementById('selected-date-label');
+      label.textContent = `선택 일자: ${AppState.selectedCalDate}`;
+
+      const events = AppState.events.filter(ev => ev.date === AppState.selectedCalDate);
+
+      if (events.length === 0) {
+        container.innerHTML = `
+          <div class="text-center py-12 text-slate-500 font-mono">
+            <i data-lucide="calendar-check" class="w-8 h-8 mx-auto text-slate-600 mb-2"></i>
+            <p class="text-xs">등록된 일정이 없습니다.</p>
+            <button id="agenda-quick-add" class="mt-2 text-revive-mint text-xs underline font-sans">이 날짜에 새 일정 등록하기</button>
+          </div>
+        `;
+        lucide.createIcons();
+        const quickBtn = document.getElementById('agenda-quick-add');
+        if (quickBtn) quickBtn.addEventListener('click', () => openCalendarEventModal(null, AppState.selectedCalDate));
+        return;
+      }
+
+      container.innerHTML = events.map(ev => {
+        const typeBadge = {
+          MEETING: '<span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 font-mono text-[10px] font-bold">미팅</span>',
+          DEMO: '<span class="px-2 py-0.5 rounded bg-cyan-500/20 text-cyan-300 font-mono text-[10px] font-bold">시술 데모</span>',
+          SEMINAR: '<span class="px-2 py-0.5 rounded bg-purple-500/20 text-purple-300 font-mono text-[10px] font-bold">MEX 세미나</span>',
+          VISIT: '<span class="px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 font-mono text-[10px] font-bold">방문/라운딩</span>'
+        }[ev.type] || '';
+
+        return `
+          <div class="p-3 bg-cosmic-950 border border-cosmic-800 rounded-xl hover:border-revive-emerald transition space-y-1.5">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                ${typeBadge}
+                <span class="font-bold text-white text-xs">${ev.accountName}</span>
+              </div>
+              <span class="text-xs font-mono font-bold text-revive-emerald">${ev.time}</span>
+            </div>
+            <div class="text-xs font-medium text-slate-200">${ev.title}</div>
+            ${ev.notes ? `<div class="text-[11px] text-slate-400 bg-cosmic-900/60 p-1.5 rounded">${ev.notes}</div>` : ''}
+            <div class="flex items-center justify-between pt-1 text-[11px] font-mono text-slate-400">
+              <span>담당: <strong class="text-revive-mint">${ev.attendee}</strong></span>
+              <div class="flex gap-2">
+                <button class="edit-event-btn text-slate-300 hover:text-white" data-id="${ev.id}">수정</button>
+                <button class="del-event-btn text-red-400 hover:text-red-300" data-id="${ev.id}">삭제</button>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      lucide.createIcons();
+
+      container.querySelectorAll('.edit-event-btn').forEach(btn => {
+        btn.addEventListener('click', () => openCalendarEventModal(btn.dataset.id));
+      });
+      container.querySelectorAll('.del-event-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          AppState.events = AppState.events.filter(e => e.id !== btn.dataset.id);
+          saveStorage();
+          renderCalendar();
+        });
+      });
+    }
+
+    function openCalendarEventModal(eventId = null, defaultDate = null) {
+      const modal = document.getElementById('calendar-event-modal');
+      const form = document.getElementById('calendar-event-form');
+      const accountSelect = document.getElementById('event-account-id');
+      const delBtn = document.getElementById('delete-cal-event-btn');
+
+      accountSelect.innerHTML = AppState.accounts.map(acc => {
+        return `<option value="${acc.id}">${acc.name} [${acc.segment}] (TM: ${acc.assignee})</option>`;
+      }).join('');
+
+      if (eventId) {
+        const ev = AppState.events.find(e => e.id === eventId);
+        if (!ev) return;
+        document.getElementById('event-id').value = ev.id;
+        accountSelect.value = ev.accountId;
+        document.getElementById('event-type').value = ev.type;
+        document.getElementById('event-attendee').value = ev.attendee;
+        document.getElementById('event-date').value = ev.date;
+        document.getElementById('event-time').value = ev.time;
+        document.getElementById('event-title').value = ev.title;
+        document.getElementById('event-notes').value = ev.notes || '';
+        delBtn.classList.remove('hidden');
+      } else {
+        form.reset();
+        document.getElementById('event-id').value = '';
+        document.getElementById('event-date').value = defaultDate || AppState.selectedCalDate;
+        document.getElementById('event-time').value = '14:00';
+        delBtn.classList.add('hidden');
+      }
+
+      modal.classList.remove('hidden');
+    }
+
+    function closeCalendarEventModal() {
+      document.getElementById('calendar-event-modal').classList.add('hidden');
+    }
+
+    function handleCalendarEventSubmit(e) {
+      e.preventDefault();
+      const id = document.getElementById('event-id').value;
+      const accountId = document.getElementById('event-account-id').value;
+      const acc = AppState.accounts.find(a => a.id === accountId);
+      const accountName = acc ? acc.name : '미확인 거래처';
+      const type = document.getElementById('event-type').value;
+      const attendee = document.getElementById('event-attendee').value;
+      const date = document.getElementById('event-date').value;
+      const time = document.getElementById('event-time').value;
+      const title = document.getElementById('event-title').value.trim();
+      const notes = document.getElementById('event-notes').value.trim();
+
+      if (id) {
+        const ev = AppState.events.find(e => e.id === id);
+        if (ev) {
+          ev.accountId = accountId;
+          ev.accountName = accountName;
+          ev.type = type;
+          ev.attendee = attendee;
+          ev.date = date;
+          ev.time = time;
+          ev.title = title;
+          ev.notes = notes;
+        }
+      } else {
+        AppState.events.push({
+          id: 'ev_' + Date.now(),
+          accountId,
+          accountName,
+          type,
+          attendee,
+          date,
+          time,
+          title,
+          notes
+        });
+      }
+
+      saveStorage();
+      renderCalendar();
+      closeCalendarEventModal();
+      audio.playClick();
+    }
+
+    // ==============================================================
+    // AI STRATEGIC INSIGHT MODULE
+    // ==============================================================
+    function generateAIInsights() {
+      const active = AppState.accounts.filter(a => a.status !== 'COMPLETE');
+      const completed = AppState.accounts.filter(a => a.status === 'COMPLETE');
+      const total = AppState.accounts.length;
+      
+      const academicCount = active.filter(a => a.segment === 'SA' || a.segment === 'LA').length;
+      const yongwooCount = active.filter(a => a.assignee === '용우').length;
+      const woojinCount = active.filter(a => a.assignee === '우진').length;
+
+      let mexProTotal = 0, tailoredTotal = 0, mexTalkTotal = 0, ssTotal = 0;
+      AppState.accounts.forEach(a => {
+        const act = a.activities || {};
+        if (act.mexPro && act.mexPro.active) mexProTotal += act.mexPro.count;
+        if (act.tailored && act.tailored.active) tailoredTotal += act.tailored.count;
+        if (act.mexTalk && act.mexTalk.active) mexTalkTotal += act.mexTalk.count;
+        if (act.ss && act.ss.active) ssTotal += act.ss.count;
+      });
+
+      const statusCounts = {
+        CONTACT: active.filter(a => a.status === 'CONTACT').length,
+        PITCHING: active.filter(a => a.status === 'PITCHING').length,
+        SAMPLING: active.filter(a => a.status === 'SAMPLING').length,
+        ONBOARDING: active.filter(a => a.status === 'ONBOARDING').length,
+      };
+
+      const kpiScore = calculateMasterKPI();
+
+      const cardsContainer = document.getElementById('ai-insight-cards');
+      cardsContainer.innerHTML = `
+        <div class="command-panel p-4 rounded-xl border-t-2 border-t-revive-emerald">
+          <div class="text-[11px] font-mono text-slate-400 font-bold uppercase">PIPELINE VELOCITY</div>
+          <div class="text-2xl font-display font-black text-white mt-1">${((completed.length / (total || 1)) * 100).toFixed(1)}%</div>
+          <div class="text-xs text-revive-mint mt-1">완결 전환율 (${completed.length}/${total}처)</div>
+        </div>
+        <div class="command-panel p-4 rounded-xl border-t-2 border-t-cyan-400">
+          <div class="text-[11px] font-mono text-slate-400 font-bold uppercase">ACADEMIC FOCUS</div>
+          <div class="text-2xl font-display font-black text-cyan-300 mt-1">${academicCount} 처</div>
+          <div class="text-xs text-slate-300 mt-1">S/A · L/A 학술 타깃 비중 (${((academicCount / (active.length || 1)) * 100).toFixed(0)}%)</div>
+        </div>
+        <div class="command-panel p-4 rounded-xl border-t-2 border-t-purple-400">
+          <div class="text-[11px] font-mono text-slate-400 font-bold uppercase">MEX PROGRAM SUM</div>
+          <div class="text-2xl font-display font-black text-purple-300 mt-1">${mexProTotal + tailoredTotal + mexTalkTotal + ssTotal} 회</div>
+          <div class="text-xs text-slate-300 mt-1">4대 학술/세미나 누적 집행</div>
+        </div>
+        <div class="command-panel p-4 rounded-xl border-t-2 border-t-amber-400">
+          <div class="text-[11px] font-mono text-slate-400 font-bold uppercase">RBS KPI STATUS</div>
+          <div class="text-2xl font-display font-black text-yellow-300 mt-1">${kpiScore}%</div>
+          <div class="text-xs text-slate-300 mt-1">${kpiScore >= 75 ? '안정적 달성 궤도 진입' : '전략적 가속화 필요'}</div>
+        </div>
+      `;
+
+      const directivesContainer = document.getElementById('team-directives-container');
+      directivesContainer.innerHTML = `
+        <div class="p-3.5 bg-cosmic-950 rounded-xl border border-revive-emerald/40 space-y-1">
+          <div class="flex items-center justify-between">
+            <span class="font-bold text-revive-emerald font-mono text-xs flex items-center gap-1.5">
+              <span>👑 LEADER</span>
+            </span>
+            <span class="px-2 py-0.5 rounded bg-revive-emerald/20 text-revive-emerald font-mono text-[10px]">전략 지시</span>
+          </div>
+          <p class="text-xs text-slate-200">
+            현재 <strong>SAMPLING</strong> 및 <strong>PITCHING</strong> 단계에 체류 중인 거래처가 전체의 ${Math.round(((statusCounts.PITCHING + statusCounts.SAMPLING) / (active.length || 1)) * 100)}%입니다. 온보딩 전환을 위해 윤 (RBS)와 함께 MEX-PRO 시술 참관 및 심포지엄 일정을 최우선 배치하십시오.
+          </p>
+        </div>
+
+        <div class="p-3.5 bg-cosmic-950 rounded-xl border border-amber-500/40 space-y-1">
+          <div class="flex items-center justify-between">
+            <span class="font-bold text-amber-300 font-mono text-xs flex items-center gap-1.5">
+              <i data-lucide="sparkles" class="w-4 h-4"></i> 윤 (RBS)
+            </span>
+            <span class="px-2 py-0.5 rounded bg-amber-500/20 text-yellow-300 font-mono text-[10px]">RBS BOOSTING</span>
+          </div>
+          <p class="text-xs text-slate-200">
+            용우 TM(${yongwooCount}처), 우진 TM(${woojinCount}처)의 모든 파이프라인에서 <strong>ACADEMIC 유형(S/A: SHORT-TERM / ACADEMIC, L/A: LONG-TERM / ACADEMIC)</strong> 거래처를 중심으로 원내 세미나(S_S) 및 MEX-TAILORED 맞춤 프로토콜을 집중 공급하십시오.
+          </p>
+        </div>
+
+        <div class="p-3.5 bg-cosmic-950 rounded-xl border border-cyan-500/40 space-y-1">
+          <div class="flex items-center justify-between">
+            <span class="font-bold text-cyan-300 font-mono text-xs flex items-center gap-1.5">
+              <i data-lucide="user" class="w-4 h-4"></i> 용우 (TM) & 우진 (TM) - 필드 실행 지침
+            </span>
+            <span class="px-2 py-0.5 rounded bg-cyan-500/20 text-cyan-300 font-mono text-[10px]">FIELD ACTION</span>
+          </div>
+          <p class="text-xs text-slate-200">
+            단기 집중처(S/A, S/C)에 대해 캘린더 일정을 2주 내로 확정하고, CPM 매트릭스 특허 기술 설명 브로슈어와 전용 쇼케이스 POP 세팅을 완료해 온보딩을 달성하십시오.
+          </p>
+        </div>
+      `;
+
+      const penetrationContainer = document.getElementById('activity-penetration-stats');
+      penetrationContainer.innerHTML = `
+        <div class="space-y-1 text-xs font-mono">
+          <div class="flex justify-between text-slate-300">
+            <span>1. MEX-PRO (라이브 데모)</span>
+            <span class="text-revive-emerald font-bold">${mexProTotal} 회 진행</span>
+          </div>
+          <div class="w-full bg-cosmic-950 h-2 rounded-full overflow-hidden border border-cosmic-800">
+            <div class="bg-revive-emerald h-full" style="width: ${Math.min(100, (mexProTotal / 40) * 100)}%"></div>
+          </div>
+        </div>
+        <div class="space-y-1 text-xs font-mono">
+          <div class="flex justify-between text-slate-300">
+            <span>2. MEX-TAILORED (원내 맞춤)</span>
+            <span class="text-teal-300 font-bold">${tailoredTotal} 회 진행</span>
+          </div>
+          <div class="w-full bg-cosmic-950 h-2 rounded-full overflow-hidden border border-cosmic-800">
+            <div class="bg-teal-400 h-full" style="width: ${Math.min(100, (tailoredTotal / 10) * 100)}%"></div>
+          </div>
+        </div>
+        <div class="space-y-1 text-xs font-mono">
+          <div class="flex justify-between text-slate-300">
+            <span>3. MEX-TALK (학술 디스커션)</span>
+            <span class="text-cyan-300 font-bold">${mexTalkTotal} 회 진행</span>
+          </div>
+          <div class="w-full bg-cosmic-950 h-2 rounded-full overflow-hidden border border-cosmic-800">
+            <div class="bg-cyan-400 h-full" style="width: ${Math.min(100, (mexTalkTotal / 40) * 100)}%"></div>
+          </div>
+        </div>
+        <div class="space-y-1 text-xs font-mono">
+          <div class="flex justify-between text-slate-300">
+            <span>4. S_S (세일즈 세미나)</span>
+            <span class="text-purple-300 font-bold">${ssTotal} 회 진행</span>
+          </div>
+          <div class="w-full bg-cosmic-950 h-2 rounded-full overflow-hidden border border-cosmic-800">
+            <div class="bg-purple-400 h-full" style="width: ${Math.min(100, (ssTotal / 5) * 100)}%"></div>
+          </div>
+        </div>
+      `;
+
+      const summaryEl = document.getElementById('rbs-ai-summary');
+      summaryEl.textContent = `현재 전체 ${total}처 중 ${completed.length}처가 완결되어 순항 중입니다. 2027년 6월 30일까지 남은 기간 동안 '윤 (RBS)'의 학술 세미나 지원을 결합해 PITCHING 상태의 중대형 거래처들을 빠르게 SAMPLING 및 온보딩으로 이동시키는 것이 Master KPI 100% 조기 달성의 핵심 열쇠입니다.`;
+
+      lucide.createIcons();
+    }
+
+    // JSON Export & Import
+    function exportDataJSON() {
+      const data = {
+        app: 'BELOTERO_REVIVE_COSMIC_COMMAND',
+        version: '4.0',
+        exportedAt: new Date().toISOString(),
+        kpis: AppState.kpis,
+        accounts: AppState.accounts,
+        events: AppState.events
+      };
+      const dataStr = 'data:text/json;charset=utf-8,' + encodeURIComponent(JSON.stringify(data, null, 2));
+      const downloadAnchor = document.createElement('a');
+      downloadAnchor.setAttribute('href', dataStr);
+      downloadAnchor.setAttribute('download', `REVIVE_COMMAND_BACKUP_${new Date().toISOString().slice(0, 10)}.json`);
+      document.body.appendChild(downloadAnchor);
+      downloadAnchor.click();
+      downloadAnchor.remove();
+    }
+
+    function importDataJSON(e) {
+      const file = e.target.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = function(event) {
+        try {
+          const parsed = JSON.parse(event.target.result);
+          if (parsed.kpis && parsed.accounts) {
+            AppState.kpis = parsed.kpis;
+            AppState.accounts = parsed.accounts;
+            AppState.events = parsed.events || [];
+            saveStorage();
+            updateKPIDisplay();
+            renderKPISliders();
+            updateCounts();
+            renderMatrixTable();
+            renderCalendar();
+            audio.playClick();
+          }
+        } catch (err) {
+          console.error('올바른 JSON 백업 파일이 아닙니다.');
+        }
+      };
+      reader.readAsText(file);
+    }
+
+    // View Switching
+    function setView(viewName) {
+      AppState.currentView = viewName;
+      const orbitSec = document.getElementById('view-orbit');
+      const matrixSec = document.getElementById('view-matrix');
+      const calSec = document.getElementById('view-calendar');
+      const insightSec = document.getElementById('view-insight');
+
+      const btnOrbit = document.getElementById('btn-view-orbit');
+      const btnMatrix = document.getElementById('btn-view-matrix');
+      const btnCal = document.getElementById('btn-view-calendar');
+      const btnInsight = document.getElementById('btn-view-insight');
+
+      const allSecs = [orbitSec, matrixSec, calSec, insightSec];
+      const allBtns = [btnOrbit, btnMatrix, btnCal, btnInsight];
+
+      allSecs.forEach(sec => sec.classList.add('hidden'));
+      allBtns.forEach(btn => {
+        btn.className = "px-2.5 sm:px-3 py-1.5 sm:py-2 rounded-lg flex items-center gap-1.5 transition font-bold text-slate-300 hover:text-white whitespace-nowrap";
+      });
+
+      const activeBtnClass = "px-2.5 sm:px-3 py-1.5 sm:py-2 rounded-lg flex items-center gap-1.5 transition font-bold bg-revive-emerald text-black shadow-[0_0_15px_rgba(0,242,178,0.4)] whitespace-nowrap";
+
+      if (viewName === 'orbit') {
+        orbitSec.classList.remove('hidden');
+        btnOrbit.className = activeBtnClass;
+      } else if (viewName === 'matrix') {
+        matrixSec.classList.remove('hidden');
+        btnMatrix.className = activeBtnClass;
+        renderMatrixTable();
+      } else if (viewName === 'calendar') {
+        calSec.classList.remove('hidden');
+        btnCal.className = activeBtnClass;
+        renderCalendar();
+      } else if (viewName === 'insight') {
+        insightSec.classList.remove('hidden');
+        btnInsight.className = activeBtnClass;
+        generateAIInsights();
+      }
+
+      audio.playClick();
+    }
+
+    // Bindings
+    document.addEventListener('DOMContentLoaded', () => {
+      loadStorage();
+      updateKPIDisplay();
+      renderKPISliders();
+      updateCounts();
+      renderMatrixTable();
+      lucide.createIcons();
+
+      // Navigation
+      document.getElementById('btn-view-orbit').addEventListener('click', () => setView('orbit'));
+      document.getElementById('btn-view-matrix').addEventListener('click', () => setView('matrix'));
+      document.getElementById('btn-view-calendar').addEventListener('click', () => setView('calendar'));
+      document.getElementById('btn-view-insight').addEventListener('click', () => setView('insight'));
+
+      // Nodes click
+      document.querySelectorAll('.node-card').forEach(card => {
+        card.addEventListener('click', () => {
+          openSegmentDrawer(card.dataset.segment);
+        });
+      });
+
+      document.getElementById('center-core').addEventListener('click', () => setView('matrix'));
+
+      // KPI Modal triggers
+      document.getElementById('kpi-hero-card').addEventListener('click', openKPIModal);
+      document.getElementById('open-kpi-modal-btn').addEventListener('click', (e) => {
+        e.stopPropagation();
+        openKPIModal();
+      });
+      document.getElementById('close-kpi-modal-btn').addEventListener('click', () => {
+        document.getElementById('kpi-modal').classList.add('hidden');
+      });
+      document.getElementById('save-kpi-btn').addEventListener('click', () => {
+        saveStorage();
+        document.getElementById('kpi-modal').classList.add('hidden');
+      });
+      document.getElementById('reset-kpi-btn').addEventListener('click', () => {
+        AppState.kpis = JSON.parse(JSON.stringify(DEFAULT_KPIS));
+        saveStorage();
+        updateKPIDisplay();
+        renderKPISliders();
+      });
+
+      // Wormhole Hub
+      document.getElementById('open-wormhole-btn').addEventListener('click', openWormholeModal);
+      document.getElementById('close-wormhole-modal-btn').addEventListener('click', () => {
+        document.getElementById('wormhole-modal').classList.add('hidden');
+      });
+
+      // Slide drawer
+      document.getElementById('close-drawer-btn').addEventListener('click', closeSegmentDrawer);
+      document.getElementById('drawer-backdrop').addEventListener('click', closeSegmentDrawer);
+      document.getElementById('drawer-search').addEventListener('input', renderDrawerList);
+      document.getElementById('drawer-add-account-btn').addEventListener('click', () => openAccountFormModal());
+
+      // Account modal
+      document.getElementById('clinic-form').addEventListener('submit', handleAccountFormSubmit);
+      document.getElementById('close-account-form-btn').addEventListener('click', closeAccountFormModal);
+      document.getElementById('cancel-account-form-btn').addEventListener('click', closeAccountFormModal);
+      document.getElementById('quick-add-btn').addEventListener('click', () => openAccountFormModal());
+
+      // Dynamic TM Owner switching in ACCOUNT DETAIL
+      document.getElementById('form-assignee').addEventListener('change', (e) => {
+        const newOwner = e.target.value;
+        modalTmDraftNotes[modalActiveAssignee] = document.getElementById('form-note-tm').value.trim();
+        modalActiveAssignee = newOwner;
+        updateTmNoteLabel(newOwner);
+        document.getElementById('form-note-tm').value = modalTmDraftNotes[newOwner] || '';
+        document.getElementById('detail-ev-attendee').value = newOwner;
+      });
+
+      // Inline schedule add inside ACCOUNT DETAIL
+      document.getElementById('detail-add-ev-btn').addEventListener('click', () => {
+        const accountId = document.getElementById('form-account-id').value;
+        const accountName = document.getElementById('form-name').value.trim() || '신규 거래처';
+        const date = document.getElementById('detail-ev-date').value || new Date().toISOString().slice(0, 10);
+        const time = document.getElementById('detail-ev-time').value || '14:00';
+        const type = document.getElementById('detail-ev-type').value;
+        const attendee = document.getElementById('detail-ev-attendee').value;
+        const titleInput = document.getElementById('detail-ev-title');
+        const title = titleInput.value.trim();
+
+        if (!title) {
+          titleInput.focus();
+          return;
+        }
+
+        const newEv = {
+          id: 'ev_' + Date.now(),
+          accountId: accountId || 'PENDING',
+          accountName,
+          type,
+          attendee,
+          date,
+          time,
+          title,
+          notes: ''
+        };
+
+        if (accountId) {
+          AppState.events.push(newEv);
+          AppState.selectedCalDate = date;
+          saveStorage();
+          renderCalendar();
+          renderAccountDetailEvents(accountId);
+        } else {
+          modalPendingEvents.push(newEv);
+          AppState.selectedCalDate = date;
+          renderAccountDetailEvents(null);
+        }
+
+        titleInput.value = '';
+        audio.playClick();
+      });
+
+      // Matrix Member Tabs
+      document.querySelectorAll('.member-tab').forEach(tab => {
+        tab.addEventListener('click', () => {
+          document.querySelectorAll('.member-tab').forEach(t => {
+            t.className = 'member-tab px-3.5 sm:px-4 py-2 rounded-xl text-xs font-mono font-bold transition flex items-center gap-2 bg-cosmic-950 text-slate-300 hover:text-white border border-cosmic-800 whitespace-nowrap';
+          });
+          tab.className = 'member-tab px-3.5 sm:px-4 py-2 rounded-xl text-xs font-mono font-bold transition flex items-center gap-2 bg-revive-emerald text-black shadow-[0_0_15px_rgba(0,242,178,0.3)] whitespace-nowrap';
+          AppState.matrixMember = tab.dataset.member;
+          renderMatrixTable();
+          audio.playClick();
+        });
+      });
+
+      // Multi-Filter inputs
+      document.getElementById('matrix-search').addEventListener('input', renderMatrixTable);
+      document.getElementById('matrix-filter-segment').addEventListener('change', renderMatrixTable);
+      document.getElementById('matrix-filter-owner').addEventListener('change', renderMatrixTable);
+      document.getElementById('matrix-filter-status').addEventListener('change', renderMatrixTable);
+
+      // Reset filters button
+      document.getElementById('matrix-reset-filters-btn').addEventListener('click', resetAllMatrixFilters);
+      const emptyReset = document.getElementById('matrix-empty-reset-btn');
+      if (emptyReset) emptyReset.addEventListener('click', resetAllMatrixFilters);
+
+      // Calendar events
+      document.getElementById('cal-prev-btn').addEventListener('click', () => {
+        AppState.calCurrentMonth--;
+        if (AppState.calCurrentMonth < 0) {
+          AppState.calCurrentMonth = 11;
+          AppState.calCurrentYear--;
+        }
+        renderCalendar();
+      });
+      document.getElementById('cal-next-btn').addEventListener('click', () => {
+        AppState.calCurrentMonth++;
+        if (AppState.calCurrentMonth > 11) {
+          AppState.calCurrentMonth = 0;
+          AppState.calCurrentYear++;
+        }
+        renderCalendar();
+      });
+      document.getElementById('add-calendar-event-btn').addEventListener('click', () => openCalendarEventModal());
+      document.getElementById('calendar-event-form').addEventListener('submit', handleCalendarEventSubmit);
+      document.getElementById('close-cal-event-btn').addEventListener('click', closeCalendarEventModal);
+      document.getElementById('cancel-cal-event-btn').addEventListener('click', closeCalendarEventModal);
+      document.getElementById('delete-cal-event-btn').addEventListener('click', () => {
+        const id = document.getElementById('event-id').value;
+        AppState.events = AppState.events.filter(e => e.id !== id);
+        saveStorage();
+        renderCalendar();
+        closeCalendarEventModal();
+      });
+
+      // AI Insight refresh
+      document.getElementById('refresh-insight-btn').addEventListener('click', () => {
+        generateAIInsights();
+        audio.playClick();
+      });
+
+      // Backup & Restore
+      document.getElementById('export-json-btn').addEventListener('click', exportDataJSON);
+      document.getElementById('import-json-input').addEventListener('change', importDataJSON);
+    });
+  </script>
+</body>
+</html>
